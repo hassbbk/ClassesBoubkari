@@ -1,2 +1,2 @@
 # ClassesBoubkari
-Ressources pour mes élèves 
+Ressources pour les élèves 
