@@ -83,7 +83,7 @@ footer {
 
 <!-- 🔐 Mot de passe simple -->
 <script>
-var password = "2026"; // 🔴 CHANGE ICI
+var password = "2026";
 var user = prompt("Veuillez entrer le mot de passe :");
 if (user !== password) {
     alert("Accès refusé");
@@ -91,54 +91,63 @@ if (user !== password) {
 }
 </script>
 
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
+
+    function remplirCategorie(categorie, elementId) {
+        const list = document.getElementById(elementId);
+        if (!data[categorie]) return;
+
+        data[categorie].sort();
+
+        data[categorie].forEach(file => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = "pdf/" + categorie + "/" + file;
+            a.textContent = file.replace(".pdf", "");
+            a.target = "_blank";
+            li.appendChild(a);
+            list.appendChild(li);
+        });
+    }
+
+    remplirCategorie("Cours", "listeCours");
+    remplirCategorie("Exercices", "listeExercices");
+    remplirCategorie("DS", "listeDS");
+
+})
+.catch(error => {
+    console.error("Erreur chargement liste.json :", error);
+});
+</script>
+
 <header>
-    <img src="/assets/logo.png" alt="Logo établissement">
-    <h1>Classe TMVP1 – Sciences</h1>
+    <h1>Sciences - TMVP1</h1>
 </header>
 
-<div class="topbar">
-    <a href="/">⬅ Retour à l'accueil</a>
+<main>
+
+<div class="categorie">
+<h2>📘 Cours</h2>
+<ul id="listeCours"></ul>
 </div>
 
-<main>
-    <h2 class="section-title">Documents pédagogiques</h2>
-    <ul id="fileList"></ul>
+<div class="categorie">
+<h2>📝 Exercices</h2>
+<ul id="listeExercices"></ul>
+</div>
+
+<div class="categorie">
+<h2>🧪 Devoirs Surveillés</h2>
+<ul id="listeDS"></ul>
+</div>
+
 </main>
 
 <footer>
-    © 2026 - Espace pédagogique - Accès réservé aux élèves
+© 2026 - Établissement scolaire
 </footer>
-
-<script>
-fetch("pdf/")
-.then(response => response.text())
-.then(text => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, "text/html");
-    const links = doc.querySelectorAll("a");
-    const list = document.getElementById("fileList");
-
-    let files = [];
-
-    links.forEach(link => {
-        if(link.href.endsWith(".pdf")) {
-            files.push(link.textContent);
-        }
-    });
-
-    files.sort();
-
-    files.forEach(file => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = "pdf/" + file;
-        a.textContent = file.replace(".pdf", "");
-        a.target = "_blank";
-        li.appendChild(a);
-        list.appendChild(li);
-    });
-});
-</script>
 
 </body>
 </html>
