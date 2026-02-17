@@ -83,13 +83,14 @@ footer {
 
 <!-- 🔐 Mot de passe simple -->
 <script>
-var password = "2026"; // 🔴 CHANGE ICI
+var password = "2026";
 var user = prompt("Veuillez entrer le mot de passe :");
 if (user !== password) {
     alert("Accès refusé");
     window.location.href = "/";
 }
-<script>
+</script>
+
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
@@ -121,9 +122,33 @@ fetch("pdf/liste.json")
 });
 </script>
 
+<header>
+    <h1>Mathématiques - TMVP1</h1>
+</header>
 
+<main>
+
+<div class="categorie">
+<h2>📘 Cours</h2>
+<ul id="listeCours"></ul>
+</div>
+
+<div class="categorie">
+<h2>📝 Exercices</h2>
+<ul id="listeExercices"></ul>
+</div>
+
+<div class="categorie">
+<h2>🧪 Devoirs Surveillés</h2>
+<ul id="listeDS"></ul>
+</div>
+
+</main>
+
+<footer>
+© 2026 - Établissement scolaire
+</footer>
 
 </body>
 </html>
 
-</html>
