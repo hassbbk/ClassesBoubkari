@@ -110,35 +110,37 @@ if (user !== password) {
 </footer>
 
 <script>
-fetch("pdf/")
-.then(response => response.text())
-.then(text => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, "text/html");
-    const links = doc.querySelectorAll("a");
-    const list = document.getElementById("fileList");
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
 
-    let files = [];
+    function remplirCategorie(categorie, elementId) {
+        const list = document.getElementById(elementId);
+        if (!data[categorie]) return;
 
-    links.forEach(link => {
-        if(link.href.endsWith(".pdf")) {
-            files.push(link.textContent);
-        }
-    });
+        data[categorie].sort();
 
-    files.sort();
+        data[categorie].forEach(file => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = "pdf/" + categorie + "/" + file;
+            a.textContent = file.replace(".pdf", "");
+            a.target = "_blank";
+            li.appendChild(a);
+            list.appendChild(li);
+        });
+    }
 
-    files.forEach(file => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = "pdf/" + file;
-        a.textContent = file.replace(".pdf", "");
-        a.target = "_blank";
-        li.appendChild(a);
-        list.appendChild(li);
-    });
+    remplirCategorie("Cours", "listeCours");
+    remplirCategorie("Exercices", "listeExercices");
+    remplirCategorie("DS", "listeDS");
+
+})
+.catch(error => {
+    console.error("Erreur chargement liste.json :", error);
 });
 </script>
+
 
 </body>
 </html>
