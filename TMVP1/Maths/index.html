@@ -89,26 +89,6 @@ if (user !== password) {
     alert("Accès refusé");
     window.location.href = "/";
 }
-</script>
-
-<header>
-    <img src="/assets/logo.png" alt="Logo établissement">
-    <h1>Classe TMVP1 – Mathématiques</h1>
-</header>
-
-<div class="topbar">
-    <a href="/">⬅ Retour à l'accueil</a>
-</div>
-
-<main>
-    <h2 class="section-title">Documents pédagogiques</h2>
-    <ul id="fileList"></ul>
-</main>
-
-<footer>
-    © 2026 - Espace pédagogique - Accès réservé aux élèves
-</footer>
-
 <script>
 fetch("pdf/liste.json")
 .then(response => response.json())
@@ -140,6 +120,7 @@ fetch("pdf/liste.json")
     console.error("Erreur chargement liste.json :", error);
 });
 </script>
+
 
 
 </body>
