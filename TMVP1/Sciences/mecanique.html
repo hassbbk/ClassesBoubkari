@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Exercices - Sciences</title>
+<title>Mecanique - TMVP1</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#eef2f7; }
@@ -20,14 +20,14 @@ a { text-decoration:none; color:#001f3f; }
 
 <header>
 <img src="/assets/logo.png" class="logo">
-<h1>📘 Exercices</h1>
+<h1>⚡ Mecanique</h1>
 </header>
 
 <main>
 
 <a href="index.html" class="retour">⬅ Retour</a>
 
-<ul id="listeExercices"></ul>
+<ul id="listeMecanique"></ul>
 
 </main>
 
@@ -35,19 +35,25 @@ a { text-decoration:none; color:#001f3f; }
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
-    if (!data["Exercices"]) return;
 
-    data["Exercices"].forEach(file => {
+    if (!data["Mecanique"]) return;
+
+    data["Mecanique"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "pdf/Exercices/" + file;
+        a.href = "pdf/Mecanique/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
         li.appendChild(a);
-        document.getElementById("listeExercices").appendChild(li);
+        document.getElementById("listeMecanique").appendChild(li);
     });
+
 });
 </script>
+
+</body>
+</html>
+pt>
 
 </body>
 </html>
