@@ -2,89 +2,57 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>VPC2 - Sciences</title>
+<title>Sciences - VPC2</title>
 
 <style>
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #eef2f7;
+    background: #eef2f7;
 }
 
 header {
-    background-color: #001f3f;
+    background: #001f3f;
     color: white;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-header img {
-    height: 150px;
-    margin-right: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.topbar {
-    background-color: #003366;
-    padding: 10px 30px;
-}
-
-.topbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+.logo {
+    max-height: 80px;
+    margin-bottom: 10px;
 }
 
 main {
-    padding: 40px;
-}
-
-.section-title {
-    border-bottom: 3px solid #003366;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    color: #003366;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: white;
-    margin-bottom: 12px;
-    padding: 14px;
-    border-left: 4px solid #003366;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-a {
-    text-decoration: none;
-    color: #003366;
-    font-weight: 500;
-}
-
-footer {
+    max-width: 800px;
+    margin: 50px auto;
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: #666;
+}
+
+.bouton {
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    width: 250px;
+    background: white;
+    border-left: 5px solid #001f3f;
+    text-decoration: none;
+    color: #001f3f;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bouton:hover {
+    background: #f5f5f5;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🔐 Mot de passe simple -->
 <script>
-var password = "2026"; // 🔴 CHANGE ICI
-var user = prompt("Veuillez entrer le mot de passe :");
+var password = "2026";
+var user = prompt("Mot de passe :");
 if (user !== password) {
     alert("Accès refusé");
     window.location.href = "/";
@@ -92,54 +60,15 @@ if (user !== password) {
 </script>
 
 <header>
-    <img src="/assets/logo.png" alt="Logo établissement">
-    <h1>Classe VPC2 – Sciences</h1>
+    <img src="/assets/logo.png" class="logo">
+    <h1>Sciences - VPC2</h1>
 </header>
 
-<div class="topbar">
-    <a href="/">⬅ Retour à l'accueil</a>
-</div>
-
 <main>
-    <h2 class="section-title">Documents pédagogiques</h2>
-    <ul id="fileList"></ul>
+    <a href="cours.html" class="bouton">📘 Cours</a>
+    <a href="exercices.html" class="bouton">📝 Exercices</a>
+    <a href="ds.html" class="bouton">🧪 Devoirs Surveillés</a>
 </main>
-
-<footer>
-    © 2026 - Espace pédagogique - Accès réservé aux élèves
-</footer>
-
-<script>
-fetch("pdf/")
-.then(response => response.text())
-.then(text => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, "text/html");
-    const links = doc.querySelectorAll("a");
-    const list = document.getElementById("fileList");
-
-    let files = [];
-
-    links.forEach(link => {
-        if(link.href.endsWith(".pdf")) {
-            files.push(link.textContent);
-        }
-    });
-
-    files.sort();
-
-    files.forEach(file => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = "pdf/" + file;
-        a.textContent = file.replace(".pdf", "");
-        a.target = "_blank";
-        li.appendChild(a);
-        list.appendChild(li);
-    });
-});
-</script>
 
 </body>
 </html>
-
