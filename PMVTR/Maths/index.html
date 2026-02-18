@@ -2,72 +2,43 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Mathématiques - PMVTR</title>
+<title>Maths - PMVTR</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #eef2f7;
-}
-
-header {
-    background: #001f3f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.logo {
-    max-height: 80px;
-    margin-bottom: 10px;
-}
-
-main {
-    max-width: 800px;
-    margin: 50px auto;
-    text-align: center;
-}
+body { font-family: Arial; margin:0; background:#eef2f7; }
+header { background:#001f3f; color:white; text-align:center; padding:20px; }
+.logo { max-height:80px; margin-bottom:10px; }
+main { max-width:800px; margin:50px auto; text-align:center; }
 
 .bouton {
-    display: block;
-    margin: 20px auto;
-    padding: 15px;
-    width: 250px;
-    background: white;
-    border-left: 5px solid #001f3f;
-    text-decoration: none;
-    color: #001f3f;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display:block;
+    margin:20px auto;
+    padding:15px;
+    width:300px;
+    background:white;
+    border-left:5px solid #001f3f;
+    text-decoration:none;
+    color:#001f3f;
+    font-weight:bold;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-.bouton:hover {
-    background: #f5f5f5;
-}
+.bouton:hover { background:#f5f5f5; }
 </style>
 </head>
 
 <body>
 
-<script>
-var password = "2026";
-var user = prompt("Mot de passe :");
-if (user !== password) {
-    alert("Accès refusé");
-    window.location.href = "/";
-}
-</script>
-
 <header>
-    <img src="/assets/logo.png" class="logo">
-    <h1>Mathématiques - PMVTR</h1>
+<img src="/assets/logo.png" class="logo">
+<h1>Mathématiques - PMVTR</h1>
 </header>
 
 <main>
-    <a href="cours.html" class="bouton">📘 Cours</a>
-    <a href="exercices.html" class="bouton">📝 Exercices</a>
-    <a href="ds.html" class="bouton">🧪 Devoirs Surveillés</a>
+<a href="suites.html" class="bouton">📈 Suites</a>
+<a href="fonctions.html" class="bouton">📊 Fonctions</a>
+<a href="statistiques.html" class="bouton">📉 Statistiques</a>
+<a href="probabilites.html" class="bouton">🎲 Probabilités</a>
 </main>
 
 </body>
