@@ -1,25 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>TMVP1 - Mathématiques</title>
+
+<style>
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background-color: #eef2f7;
+}
+
+header {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+main {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.categorie {
+    margin-bottom: 40px;
+}
+
+.categorie h2 {
+    border-bottom: 3px solid #001f3f;
+    padding-bottom: 8px;
+    color: #001f3f;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-left: 4px solid #001f3f;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.bouton-download {
+    background-color: #001f3f;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.bouton-download:hover {
+    background-color: #003366;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔐 Mot de passe -->
+<script>
+var password = "2026";
+var user = prompt("Veuillez entrer le mot de passe :");
+
+if (user !== password) {
+    alert("Accès refusé");
+    window.location.href = "/";
+}
+</script>
+
+<header>
+    <img src="/assets/logo.png" class="logo">
+    <h1>Mathématiques - TMVP1</h1>
+</header>
+
+<main>
+
+<div class="categorie">
+<h2>📘 Cours</h2>
+<ul id="listeCours"></ul>
+</div>
+
+<div class="categorie">
+<h2>📝 Exercices</h2>
+<ul id="listeExercices"></ul>
+</div>
+
+<div class="categorie">
+<h2>🧪 Devoirs Surveillés</h2>
+<ul id="listeDS"></ul>
+</div>
+
+</main>
+
+<footer>
+© 2026 - Établissement scolaire
+</footer>
+
 <script>
 fetch("pdf/liste.json")
-.then(response => response.json())
-.then(data => {
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
 
     function remplirCategorie(categorie, elementId) {
-        const list = document.getElementById(elementId);
+
+        var list = document.getElementById(elementId);
         if (!data[categorie]) return;
 
-        data[categorie].forEach(file => {
+        data[categorie].forEach(function(file) {
 
-            const li = document.createElement("li");
+            var li = document.createElement("li");
 
-            const infoDiv = document.createElement("div");
+            var infoDiv = document.createElement("div");
             infoDiv.className = "doc-info";
 
-            const titre = document.createElement("span");
+            var titre = document.createElement("span");
             titre.textContent = file.replace(".pdf", "");
 
             infoDiv.appendChild(titre);
 
-            const bouton = document.createElement("a");
+            var bouton = document.createElement("a");
             bouton.href = "pdf/" + categorie + "/" + file;
             bouton.textContent = "Télécharger";
             bouton.className = "bouton-download";
@@ -37,8 +171,11 @@ fetch("pdf/liste.json")
     remplirCategorie("DS", "listeDS");
 
 })
-.catch(error => {
-    console.error("Erreur chargement liste.json :", error);
+.catch(function(error) {
+    console.log("Erreur chargement liste.json :", error);
 });
 </script>
+
+</body>
+</html>
 
