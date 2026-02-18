@@ -2,20 +2,20 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TMVP1 - Mathématiques</title>
+<title>Mathématiques - TMVP1</title>
 
 <style>
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #eef2f7;
+    background: #eef2f7;
 }
 
 header {
-    background-color: #001f3f;
+    background: #001f3f;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
 
 .logo {
@@ -23,78 +23,36 @@ header {
     margin-bottom: 10px;
 }
 
-h1 {
-    margin: 5px 0;
-    font-size: 22px;
-    font-weight: 500;
-}
-
 main {
-    padding: 40px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.categorie {
-    margin-bottom: 40px;
-}
-
-.categorie h2 {
-    border-bottom: 3px solid #001f3f;
-    padding-bottom: 8px;
-    color: #001f3f;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: white;
-    margin-bottom: 12px;
-    padding: 15px;
-    border-left: 4px solid #001f3f;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.doc-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.bouton-download {
-    background-color: #001f3f;
-    color: white;
-    padding: 6px 12px;
-    text-decoration: none;
-    font-size: 12px;
-    border-radius: 4px;
-}
-
-.bouton-download:hover {
-    background-color: #003366;
-}
-
-footer {
+    max-width: 800px;
+    margin: 50px auto;
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: #666;
+}
+
+.bouton {
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    width: 250px;
+    background: white;
+    border-left: 5px solid #001f3f;
+    text-decoration: none;
+    color: #001f3f;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bouton:hover {
+    background: #f5f5f5;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🔐 Mot de passe -->
 <script>
 var password = "2026";
-var user = prompt("Veuillez entrer le mot de passe :");
-
+var user = prompt("Mot de passe :");
 if (user !== password) {
     alert("Accès refusé");
     window.location.href = "/";
@@ -107,74 +65,10 @@ if (user !== password) {
 </header>
 
 <main>
-
-<div class="categorie">
-<h2>📘 Cours</h2>
-<ul id="listeCours"></ul>
-</div>
-
-<div class="categorie">
-<h2>📝 Exercices</h2>
-<ul id="listeExercices"></ul>
-</div>
-
-<div class="categorie">
-<h2>🧪 Devoirs Surveillés</h2>
-<ul id="listeDS"></ul>
-</div>
-
+    <a href="cours.html" class="bouton">📘 Cours</a>
+    <a href="exercices.html" class="bouton">📝 Exercices</a>
+    <a href="ds.html" class="bouton">🧪 Devoirs Surveillés</a>
 </main>
-
-<footer>
-© 2026 - Établissement scolaire
-</footer>
-
-<script>
-fetch("pdf/liste.json")
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-
-    function remplirCategorie(categorie, elementId) {
-
-        var list = document.getElementById(elementId);
-        if (!data[categorie]) return;
-
-        data[categorie].forEach(function(file) {
-
-            var li = document.createElement("li");
-
-            var infoDiv = document.createElement("div");
-            infoDiv.className = "doc-info";
-
-            var titre = document.createElement("span");
-            titre.textContent = file.replace(".pdf", "");
-
-            infoDiv.appendChild(titre);
-
-            var bouton = document.createElement("a");
-            bouton.href = "pdf/" + categorie + "/" + file;
-            bouton.textContent = "Télécharger";
-            bouton.className = "bouton-download";
-            bouton.target = "_blank";
-
-            li.appendChild(infoDiv);
-            li.appendChild(bouton);
-
-            list.appendChild(li);
-        });
-    }
-
-    remplirCategorie("Cours", "listeCours");
-    remplirCategorie("Exercices", "listeExercices");
-    remplirCategorie("DS", "listeDS");
-
-})
-.catch(function(error) {
-    console.log("Erreur chargement liste.json :", error);
-});
-</script>
 
 </body>
 </html>
