@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Cours - Sciences</title>
+<title>Chimie - TMVP1</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#eef2f7; }
@@ -20,14 +20,14 @@ a { text-decoration:none; color:#001f3f; }
 
 <header>
 <img src="/assets/logo.png" class="logo">
-<h1>📘 Cours</h1>
+<h1>⚡ Chimie</h1>
 </header>
 
 <main>
 
 <a href="index.html" class="retour">⬅ Retour</a>
 
-<ul id="listeCours"></ul>
+<ul id="listeChimie"></ul>
 
 </main>
 
@@ -35,19 +35,25 @@ a { text-decoration:none; color:#001f3f; }
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
-    if (!data["Cours"]) return;
 
-    data["Cours"].forEach(file => {
+    if (!data["Chimie"]) return;
+
+    data["Chimie"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "pdf/Cours/" + file;
+        a.href = "pdf/Chimie/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
         li.appendChild(a);
-        document.getElementById("listeCours").appendChild(li);
+        document.getElementById("listeChimie").appendChild(li);
     });
+
 });
 </script>
+
+</body>
+</html>
+pt>
 
 </body>
 </html>
