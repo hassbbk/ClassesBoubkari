@@ -14,41 +14,35 @@ body {
 header {
     background-color: #001f3f;
     color: white;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
-header img {
-    height: 150px;
-    margin-right: 20px;
+.logo {
+    max-height: 80px;
+    margin-bottom: 10px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.topbar {
-    background-color: #003366;
-    padding: 10px 30px;
-}
-
-.topbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+h1 {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 main {
     padding: 40px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.section-title {
-    border-bottom: 3px solid #003366;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    color: #003366;
+.categorie {
+    margin-bottom: 40px;
+}
+
+.categorie h2 {
+    border-bottom: 3px solid #001f3f;
+    padding-bottom: 8px;
+    color: #001f3f;
 }
 
 ul {
@@ -59,15 +53,35 @@ ul {
 li {
     background: white;
     margin-bottom: 12px;
-    padding: 14px;
-    border-left: 4px solid #003366;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding: 15px;
+    border-left: 4px solid #001f3f;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-a {
+.doc-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.doc-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.bouton-download {
+    background-color: #001f3f;
+    color: white;
+    padding: 6px 12px;
     text-decoration: none;
-    color: #003366;
-    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.bouton-download:hover {
+    background-color: #003366;
 }
 
 footer {
@@ -76,101 +90,14 @@ footer {
     font-size: 12px;
     color: #666;
 }
-    .categorie {
-    margin-bottom: 40px;
-}
-
-.categorie h2 {
-    border-bottom: 3px solid #003366;
-    padding-bottom: 8px;
-    color: #003366;
-}
-
-li {
-    background: white;
-    margin-bottom: 12px;
-    padding: 15px;
-    border-left: 4px solid #003366;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.doc-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.doc-date {
-    font-size: 12px;
-    color: #666;
-}
-
-.bouton-download {
-    background-color: #003366;
-    color: white;
-    padding: 6px 12px;
-    text-decoration: none;
-    font-size: 12px;
-    border-radius: 4px;
-}
-
-.bouton-download:hover {
-    background-color: #0055aa;
-}
-.categorie {
-    margin-bottom: 40px;
-}
-
-.categorie h2 {
-    border-bottom: 3px solid #003366;
-    padding-bottom: 8px;
-    color: #003366;
-}
-
-li {
-    background: white;
-    margin-bottom: 12px;
-    padding: 15px;
-    border-left: 4px solid #003366;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.doc-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.doc-date {
-    font-size: 12px;
-    color: #666;
-}
-
-.bouton-download {
-    background-color: #003366;
-    color: white;
-    padding: 6px 12px;
-    text-decoration: none;
-    font-size: 12px;
-    border-radius: 4px;
-}
-
-.bouton-download:hover {
-    background-color: #0055aa;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- 🔐 Mot de passe simple -->
+<!-- 🔐 Protection simple -->
 <script>
-var password = "2026";
+var password = "2026"; // 🔴 Modifiable ici
 var user = prompt("Veuillez entrer le mot de passe :");
 if (user !== password) {
     alert("Accès refusé");
@@ -178,38 +105,8 @@ if (user !== password) {
 }
 </script>
 
-fetch("pdf/liste.json")
-.then(response => response.json())
-.then(data => {
-
-    function remplirCategorie(categorie, elementId) {
-        const list = document.getElementById(elementId);
-        if (!data[categorie]) return;
-
-        data[categorie].sort();
-
-        data[categorie].forEach(file => {
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = "pdf/" + categorie + "/" + file;
-            a.textContent = file.replace(".pdf", "");
-            a.target = "_blank";
-            li.appendChild(a);
-            list.appendChild(li);
-        });
-    }
-
-    remplirCategorie("Cours", "listeCours");
-    remplirCategorie("Exercices", "listeExercices");
-    remplirCategorie("DS", "listeDS");
-
-})
-.catch(error => {
-    console.error("Erreur chargement liste.json :", error);
-});
-</script>
-
 <header>
+    <img src="/assets/logo.png" class="logo">
     <h1>Mathématiques - TMVP1</h1>
 </header>
 
@@ -235,6 +132,55 @@ fetch("pdf/liste.json")
 <footer>
 © 2026 - Établissement scolaire
 </footer>
+
+<script>
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
+
+    function remplirCategorie(categorie, elementId) {
+        const list = document.getElementById(elementId);
+        if (!data[categorie]) return;
+
+        data[categorie].forEach(file => {
+
+            const li = document.createElement("li");
+
+            const infoDiv = document.createElement("div");
+            infoDiv.className = "doc-info";
+
+            const titre = document.createElement("span");
+            titre.textContent = file.nom.replace(".pdf", "");
+
+            const date = document.createElement("span");
+            date.textContent = "Publié le " + file.date;
+            date.className = "doc-date";
+
+            infoDiv.appendChild(titre);
+            infoDiv.appendChild(date);
+
+            const bouton = document.createElement("a");
+            bouton.href = "pdf/" + categorie + "/" + file.nom;
+            bouton.textContent = "Télécharger";
+            bouton.className = "bouton-download";
+            bouton.target = "_blank";
+
+            li.appendChild(infoDiv);
+            li.appendChild(bouton);
+
+            list.appendChild(li);
+        });
+    }
+
+    remplirCategorie("Cours", "listeCours");
+    remplirCategorie("Exercices", "listeExercices");
+    remplirCategorie("DS", "listeDS");
+
+})
+.catch(error => {
+    console.error("Erreur chargement liste.json :", error);
+});
+</script>
 
 </body>
 </html>
