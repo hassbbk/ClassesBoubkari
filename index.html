@@ -2,62 +2,42 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Espace pédagogique</title>
+<title>VPC2</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
+    text-align:center;
 }
 
-header {
-  background: #0d3b66;
-  color: white;
-  padding: 25px;
-  text-align: center;
+header { 
+    background:#001f3f; 
+    color:white; 
+    padding:30px; 
 }
 
-/* 🔵 Taille du logo */
-.logo {
-  height: 140px;
-  display: block;
-  margin: 0 auto 15px auto;
+main { 
+    margin-top:60px; 
 }
 
-header h1 {
-  margin: 0;
+.bouton {
+    display:inline-block;
+    margin:20px;
+    padding:20px 40px;
+    background:white;
+    border-radius:10px;
+    text-decoration:none;
+    color:#001f3f;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.class-card {
-  background: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #0d3b66;
-  font-size: 20px;
-  display: block;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: 0.2s;
-}
-
-.class-card:hover {
-  background: #e6f0ff;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #eaeaea;
-  font-size: 14px;
+.bouton:hover {
+    background:#001f3f;
+    color:white;
 }
 </style>
 </head>
@@ -65,23 +45,15 @@ footer {
 <body>
 
 <header>
-  <!-- 🔵 Logo ajouté ici -->
-  <img src="assets/logo.png" alt="Logo du lycée" class="logo">
-
-  <h1>Espace pédagogique</h1>
-  <p>Documents scolaires</p>
+<h1>Classe VPC2</h1>
 </header>
 
-<div class="container">
-  <a class="class-card" href="TMVP1/">Classe TMVP1</a>
-  <a class="class-card" href="PMVTR/">Classe PMVTR</a>
-  <a class="class-card" href="VPC2/">Classe VPC2</a>
-  <a class="class-card" href="AGAA1/">Classe AGAA1</a>
-</div>
+<main>
 
-<footer>
-  © 2026 - Classes Boubkari
-</footer>
+<a href="Maths/index.html" class="bouton">📘 Mathématiques</a>
+<a href="Sciences/index.html" class="bouton">🔬 Sciences</a>
+
+</main>
 
 </body>
 </html>
