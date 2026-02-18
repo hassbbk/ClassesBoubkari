@@ -1,12 +1,14 @@
 {
   "Cours": [
-    "chapitre1.pdf",
-    "chapitre2.pdf"
+    "10_crs_proba_Rappels.pdf",
+    "11_crs_proba_trace ecrite.pdf"
   ],
   "Exercices": [
-    "exercices_chap1.pdf"
+    "20_exos_proba_site maths sciences.pdf",
+    "21_exos_PROBABILITES_Activites_Cours_livre[construire arbre proba].pdf"
   ],
   "DS": [
-    "DS1.pdf"
+    "31_DS2 - PROBABILITES_Activites_Cours Livre.pdf",
+    "30_DS1_ test de connaissances bases proba.pdf"
   ]
 }
