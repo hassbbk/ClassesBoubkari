@@ -1,12 +1,14 @@
 {
-  "Cours": [
-    "chapitre1.pdf",
-    "chapitre2.pdf"
+  "Electricite": [
+    "Chapitre 1.pdf"
   ],
-  "Exercices": [
-    "exercices_chap1.pdf"
+  "Thermique": [
+    "Chapitre Thermique 1.pdf"
   ],
-  "DS": [
-    "DS1.pdf"
+  "Mecanique": [
+    "Chapitre Mecanique 1.pdf"
+  ],
+  "Chimie": [
+    "Chapitre Chimie 1.pdf"
   ]
 }
