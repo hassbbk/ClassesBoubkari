@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>chimie - AGAA1</title>
+<title>Chimie - AGAA1</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#eef2f7; }
@@ -20,7 +20,7 @@ a { text-decoration:none; color:#001f3f; }
 
 <header>
 <img src="/assets/logo.png" class="logo">
-<h1>⚡ chimie</h1>
+<h1>⚡ Chimie</h1>
 </header>
 
 <main>
@@ -36,16 +36,16 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["chimie"]) return;
+    if (!data["Chimie"]) return;
 
-    data["chimie"].forEach(file => {
+    data["Chimie"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "pdf/chimie/" + file;
+        a.href = "pdf/Chimie/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
         li.appendChild(a);
-        document.getElementById("listechimie").appendChild(li);
+        document.getElementById("listeChimie").appendChild(li);
     });
 
 });
