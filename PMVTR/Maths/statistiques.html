@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Statistiques - PMVTR</title>
+
+<style>
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
+}
+
+header { 
+    background:#001f3f; 
+    color:white; 
+    text-align:center; 
+    padding:20px; 
+}
+
+.logo { 
+    max-height:70px; 
+}
+
+main { 
+    max-width:900px; 
+    margin:40px auto; 
+}
+
+ul { 
+    list-style:none; 
+    padding:0; 
+}
+
+li { 
+    background:white; 
+    padding:15px; 
+    margin-bottom:10px; 
+    border-left:4px solid #001f3f; 
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+a { 
+    text-decoration:none; 
+    color:#001f3f; 
+}
+
+.retour { 
+    display:inline-block; 
+    margin-bottom:20px; 
+    color:#001f3f; 
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="/assets/logo.png" class="logo">
+<h1>📈 Statistiques</h1>
+</header>
+
+<main>
+
+<a href="index.html" class="retour">⬅ Retour</a>
+
+<ul id="listeStatistiques"></ul>
+
+</main>
+
+<script>
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
+
+    if (!data["Statistiques"]) return;
+
+    data["Statistiques"].forEach(file => {
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        a.href = "pdf/Statistiques/" + file;
+        a.textContent = file.replace(".pdf","");
+        a.target = "_blank";
+
+        li.appendChild(a);
+        document.getElementById("listeStatistiques").appendChild(li);
+    });
+
+})
+.catch(error => {
+    console.log("Erreur chargement liste.json :", error);
+});
+</script>
+
+</body>
+</html>
