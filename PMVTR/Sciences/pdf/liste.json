@@ -1,14 +1,14 @@
 {
-  "Cours": [
-    "_____.pdf",
-    "__________.pdf"
+  "Electricite": [
+    "Chapitre 1.pdf"
   ],
-  "Exercices": [
-    "_____________.pdf",
-    "_____________________.pdf"
+  "Thermique": [
+    "Chapitre Thermique 1.pdf"
   ],
-  "DS": [
-    "______________________.pdf",
-    "3_____________________________.pdf"
+  "Mecanique": [
+    "Chapitre Mecanique 1.pdf"
+  ],
+  "Chimie": [
+    "Chapitre Chimie 1.pdf"
   ]
 }
