@@ -2,14 +2,22 @@
   "Cours": [
     "300_crs_Statistiques à deux variables[élève].pdf",
     "301_crs_Statistiques à deux variables[prof].pdf",
-    "302_crs_Application et méthode.pdf"
+    "302_crs_Application et méthode.pdf",
+    "100_crs_Suites_A.pdf",
+    "101_crs_Suite_A_ séq [prof].pdf",
+    "102_crs_somme suite Arithmétiques.pdf",
+    "102_trace_écrite_Suite_A (2).pdf",
+    "103_trace_écrite_Suite_A.pdf"
   ],
   "Exercices": [
     "303_activité coursstat 2 var_livre_Foucher.pdf",
-    "________________________.pdf"
+    "140_exo_SuitesA_Livre.pdf",
+    "141_exo_suites A.pdf"
   ],
   "DS": [
     "340_DS-stat2var.pdf",
-    "341_Entrainement ccf statistiques à deux variables.pdf"
+    "341_Entrainement ccf statistiques à deux variables.pdf",
+    "170_ds_Suite_A[correction].pdf",
+    "170_ds_Suite_A[sujet3].pdf"
   ]
 }
