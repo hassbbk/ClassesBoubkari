@@ -7,17 +7,28 @@
     "101_crs_Suite_A_ séq [prof].pdf",
     "102_crs_somme suite Arithmétiques.pdf",
     "102_trace_écrite_Suite_A (2).pdf",
-    "103_trace_écrite_Suite_A.pdf"
+    "103_trace_écrite_Suite_A.pdf",
+    "272_eval_fonctions petits exercices.pdf",
+    "201_crs_fonctions_bases.pdf",
+    "202_crs_Signe d’une fonction du premier degré.pdf"
+ 
   ],
   "Exercices": [
     "303_activité coursstat 2 var_livre_Foucher.pdf",
     "140_exo_SuitesA_Livre.pdf",
-    "141_exo_suites A.pdf"
+    "141_exo_suites A.pdf",
+    "202_crs_Signe d’une fonction du premier degré.pdf",
+    "241_activité_fonction_ Polynomes degre 2.pdf"
   ],
   "DS": [
     "340_DS-stat2var.pdf",
     "341_Entrainement ccf statistiques à deux variables.pdf",
     "170_ds_Suite_A[correction].pdf",
-    "170_ds_Suite_A[sujet3].pdf"
+    "170_ds_Suite_A[sujet3].pdf",
+    "270_ds_notion de foction.pdf",
+    "270_ds_notion de foction[correction).pdf",
+    "271_ds_var° fonction.pdf",
+    "272_eval_fonctions petits exercices.pdf",
+    "273_eval_Problèmes et entrainement ccf.pdf"
   ]
 }
