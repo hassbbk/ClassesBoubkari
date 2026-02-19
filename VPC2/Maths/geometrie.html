@@ -89,7 +89,7 @@ fetch("pdf/liste.json")
 
     if (!data["Geometrie"]) return;
 
-    data["Fonctions"].forEach(file => {
+    data["Geometrie"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
