@@ -89,7 +89,7 @@ fetch("pdf/liste.json")
 
     if (!data["Chimie"]) return;
 
-    data["Thermique"].forEach(file => {
+    data["Chimie"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
