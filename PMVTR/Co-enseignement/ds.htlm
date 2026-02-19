@@ -2,52 +2,88 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>DS - Co-enseignement</title>
+<title>Co-enseignement - PMVTR</title>
 
 <style>
-body { font-family: Arial; margin:0; background:#eef2f7; }
-header { background:#001f3f; color:white; text-align:center; padding:20px; }
-.logo { max-height:70px; }
-main { max-width:900px; margin:40px auto; }
-ul { list-style:none; padding:0; }
-li { background:white; padding:15px; margin-bottom:10px; border-left:4px solid #001f3f; }
-a { text-decoration:none; color:#001f3f; }
-.retour { display:inline-block; margin-bottom:20px; color:#001f3f; }
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
+    text-align:center;
+}
+
+header { 
+    background:#001f3f; 
+    color:white; 
+    padding:30px; 
+}
+
+main { 
+    margin-top:40px; 
+}
+
+.bouton {
+    display:inline-block;
+    margin:20px;
+    padding:20px 40px;
+    background:white;
+    border-radius:10px;
+    text-decoration:none;
+    color:#001f3f;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bouton:hover {
+    background:#001f3f;
+    color:white;
+}
+
+.navigation {
+    margin-top:50px;
+}
+
+.nav-btn {
+    display:inline-block;
+    margin:10px;
+    padding:10px 20px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:16px;
+}
+
+.nav-btn:hover {
+    background:#003366;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="/assets/logo.png" class="logo">
-<h1>📘 DS</h1>
+<h1>📘 Coenseignement - PMVTR</h1>
 </header>
 
 <main>
 
-<a href="index.html" class="retour">⬅ Retour</a>
+<!-- Chapitres -->
 
-<ul id="listeDS"></ul>
+<a href="cours.html" class="bouton">📐 Cours</a>
+<a href="exercices.html" class="bouton">📊 Exerices</a>
+<a href="ds.html" class="bouton">📈 Devoirs Surveillés</a>
+//<a href="probabilites.html" class="bouton">🎲 Probabilités</a>//
+
+<!-- Navigation -->
+
+<div class="navigation">
+    <a href="../index.html" class="nav-btn">⬅ Retour à la classe</a>
+    <a href="/ClassesBoubkari/index.html" class="nav-btn">🏠 Accueil</a>
+</div>
 
 </main>
-
-<script>
-fetch("pdf/liste.json")
-.then(response => response.json())
-.then(data => {
-    if (!data["DS"]) return;
-
-    data["DS"].forEach(file => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = "pdf/DS/" + file;
-        a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
-        li.appendChild(a);
-        document.getElementById("listeDS").appendChild(li);
-    });
-});
-</script>
 
 </body>
 </html>
