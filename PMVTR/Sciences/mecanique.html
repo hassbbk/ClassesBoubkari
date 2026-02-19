@@ -2,32 +2,83 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Mecanique - PMVTR</title>
+<title>Mécanique - PMVTR</title>
 
 <style>
-body { font-family: Arial; margin:0; background:#eef2f7; }
-header { background:#001f3f; color:white; text-align:center; padding:20px; }
-.logo { max-height:70px; }
-main { max-width:900px; margin:40px auto; }
-ul { list-style:none; padding:0; }
-li { background:white; padding:15px; margin-bottom:10px; border-left:4px solid #001f3f; }
-a { text-decoration:none; color:#001f3f; }
-.retour { display:inline-block; margin-bottom:20px; color:#001f3f; }
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
+}
+
+header { 
+    background:#001f3f; 
+    color:white; 
+    text-align:center;
+    padding:20px; 
+}
+
+main { 
+    max-width:900px; 
+    margin:40px auto; 
+    padding:20px;
+}
+
+.navigation {
+    margin-bottom:30px;
+}
+
+.nav-btn {
+    display:inline-block;
+    margin-right:15px;
+    padding:8px 15px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.nav-btn:hover {
+    background:#003366;
+}
+
+ul { 
+    list-style:none; 
+    padding:0; 
+}
+
+li { 
+    background:white; 
+    padding:15px; 
+    margin-bottom:10px; 
+    border-left:4px solid #001f3f; 
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+a { 
+    text-decoration:none; 
+    color:#001f3f; 
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="/assets/logo.png" class="logo">
-<h1>⚡ Mecanique</h1>
+<h1>⚡ Mécanique - PMVTR</h1>
 </header>
 
 <main>
 
-<a href="index.html" class="retour">⬅ Retour</a>
+<div class="navigation">
+    <a href="javascript:history.back()" class="nav-btn">⬅ Page précédente</a>
+    <a href="/ClassesBoubkari/index.html" class="nav-btn">🏠 Accueil</a>
+</div>
 
-<ul id="listeMecanique"></ul>
+<h2>Documents disponibles</h2>
+
+<ul id="listeElectricite"></ul>
 
 </main>
 
@@ -39,15 +90,21 @@ fetch("pdf/liste.json")
     if (!data["Mecanique"]) return;
 
     data["Mecanique"].forEach(file => {
+
         const li = document.createElement("li");
         const a = document.createElement("a");
+
         a.href = "pdf/Mecanique/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
+
         li.appendChild(a);
         document.getElementById("listeMecanique").appendChild(li);
     });
 
+})
+.catch(error => {
+    console.log("Erreur chargement liste.json :", error);
 });
 </script>
 
