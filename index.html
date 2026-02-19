@@ -5,21 +5,36 @@
 <title>Classes Boubkari</title>
 
 <style>
-body { 
-    font-family: Arial; 
-    margin:0; 
-    background:#eef2f7; 
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#eef2f7;
     text-align:center;
 }
 
-header { 
-    background:#001f3f; 
-    color:white; 
-    padding:30px; 
+header {
+    background:#001f3f;
+    color:white;
+    padding:30px 20px;
 }
 
-main { 
-    margin-top:60px; 
+.logo {
+    max-height:100px;
+    margin-bottom:15px;
+}
+
+h1 {
+    margin:10px 0;
+    font-size:36px;
+}
+
+.subtitle {
+    font-size:18px;
+    opacity:0.9;
+}
+
+main {
+    margin:60px 0;
 }
 
 .bouton {
@@ -27,17 +42,27 @@ main {
     margin:20px;
     padding:20px 40px;
     background:white;
-    border-radius:10px;
+    border-radius:12px;
     text-decoration:none;
     color:#001f3f;
-    font-size:20px;
+    font-size:22px;
     font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
 .bouton:hover {
     background:#001f3f;
     color:white;
+    transform:scale(1.05);
+}
+
+footer {
+    margin-top:80px;
+    padding:20px;
+    background:#001f3f;
+    color:white;
+    font-size:14px;
 }
 </style>
 </head>
@@ -45,19 +70,24 @@ main {
 <body>
 
 <header>
-<h1>📚 Classes Boubkari</h1>
+    <!-- Logo du lycée -->
+    <img src="assets/logo.png" class="logo" alt="Logo Lycée">
+
+    <h1>📘 Classes Boubkari</h1>
+    <div class="subtitle">Espace pédagogique</div>
 </header>
 
 <main>
 
-<a href="TMVP1/index.html" class="bouton">TMVP1</a>
-<a href="PMVTR/index.html" class="bouton">PMVTR</a>
-<a href="VPC2/index.html" class="bouton">VPC2</a>
-<a href="AGAA1/index.html" class="bouton">AGAA1</a>
+    <a href="PMVTR/index.html" class="bouton">PMVTR</a>
+    <a href="VPC2/index.html" class="bouton">VPC2</a>
+    <a href="TMVP1/index.html" class="bouton">TMVP1</a>
 
 </main>
 
-</body>
-</html>
+<footer>
+    © 2026 - Lycée Boubkari
+</footer>
 
+</body>
 </html>
