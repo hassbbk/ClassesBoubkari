@@ -1,8 +1,8 @@
 {
   "Suites": [
     "01_ suites numériques G séquence [cours élève]_bis.pdf",
-    "01_suites numériques G séquence [cours Prof].pdf"
-    "02_somme _k_premiers_termes [exercices élève]",
+    "01_suites numériques G séquence [cours Prof].pdf",
+    "02_somme _k_premiers_termes [exercices élève].pdf",
     "03_DS_suites _2.pdf",
     "03_DS_suites_1.pdf",
     "03_Ds_suites_3.pdf"
@@ -10,17 +10,17 @@
   ],
 
   "Fonctions": [
-    "01-Construire un tableau de variations[élève]",
+    "01-Construire un tableau de variations[élève].pdf",
     "01-Construire un tableau de variations[prof].pdf",
     "01-Courbes et tab de var.pdf",
     "02_Entrainement exercice tab var.pdf",
     "02_fonction du 2d d° chûte d'un objet.pdf",
     "03_Signe d’une fonction du premier degré.pdf",
-    "04_Signe d’une fonction du second degré",
+    "04_Signe d’une fonction du second degré.pdf",
     "06_activité cours fonctions polynome du secon degré.pdf",
     "07_correction DS f° second degré N2.pdf",
     "07_DS f° 2ème degré N2.pdf",
-    "07_DS fonction 2ème degré N1",
+    "07_DS fonction 2ème degré N1.pdf",
     "08_Evolution du chiffre d'affaires.pdf",
     "09_Exemple trajectoire projectile.pdf".pdf",
     "........................_.pdf",
