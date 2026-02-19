@@ -1,14 +1,21 @@
 {
-  "Cours": [
-    "10_crs_proba_Rappels.pdf",
-    "11_crs_proba_trace ecrite.pdf"
+  "Suites": [
+    "suites_cours1.pdf",
+    "suites_exercices1.pdf"
   ],
-  "Exercices": [
-    "20_exos_proba_site maths sciences.pdf",
-    "21_exos_PROBABILITES_Activites_Cours_livre[construire arbre proba].pdf"
+
+  "Fonctions": [
+    "fonctions_cours1.pdf",
+    "fonctions_exercices1.pdf"
   ],
-  "DS": [
-    "31_DS2 - PROBABILITES_Activites_Cours Livre.pdf",
-    "30_DS1_ test de connaissances bases proba.pdf"
+
+  "Statistiques": [
+    "statistiques_cours1.pdf",
+    "statistiques_exercices1.pdf"
+  ],
+
+  "Probabilites": [
+    "probabilites_cours1.pdf",
+    "probabilites_exercices1.pdf"
   ]
 }
