@@ -89,7 +89,7 @@ fetch("pdf/liste.json")
 
     if (!data["Probabilites"]) return;
 
-    data["Fonctions"].forEach(file => {
+    data["Probabilites"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
