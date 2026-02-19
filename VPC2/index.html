@@ -2,42 +2,53 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>VPC2</title>
+<title>VPC2 - Classes Boubkari</title>
 
 <style>
-body { 
-    font-family: Arial; 
-    margin:0; 
-    background:#eef2f7; 
+body {
+    margin:0;
+    font-family: Arial;
+    background:#eef2f7;
     text-align:center;
 }
 
-header { 
-    background:#001f3f; 
-    color:white; 
-    padding:30px; 
-}
-
-main { 
-    margin-top:60px; 
-}
-
-.bouton {
-    display:inline-block;
-    margin:20px;
-    padding:20px 40px;
-    background:white;
-    border-radius:10px;
-    text-decoration:none;
-    color:#001f3f;
-    font-size:20px;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.bouton:hover {
+header {
     background:#001f3f;
     color:white;
+    padding:30px;
+}
+
+.logo {
+    max-height:90px;
+    margin-bottom:15px;
+}
+
+.login-box {
+    margin-top:80px;
+}
+
+input {
+    padding:10px;
+    font-size:16px;
+    width:200px;
+}
+
+button {
+    padding:10px 20px;
+    font-size:16px;
+    background:#001f3f;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+button:hover {
+    background:#003366;
+}
+
+.hidden {
+    display:none;
 }
 </style>
 </head>
@@ -45,16 +56,48 @@ main {
 <body>
 
 <header>
-<h1>Classe VPC2</h1>
+    <!-- Logo du lycée -->
+    <img src="../assets/logo1.png" class="logo" alt="Logo Lycée">
+    <h1>Classe VPC2</h1>
 </header>
 
-<main>
+<!-- Zone mot de passe -->
+<div id="login" class="login-box">
+    <h2>🔒 Accès protégé</h2>
+    <p>Veuillez entrer le mot de passe :</p>
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="checkPassword()">Valider</button>
+    <p id="error" style="color:red;"></p>
+</div>
 
-<a href="Maths/index.html" class="bouton">📘 Mathématiques</a>
-<a href="Sciences/index.html" class="bouton">🔬 Sciences</a>
-<a href="Co-enseignement/index.html" class="bouton">🤝 Co-enseignement</a>
+<!-- Contenu caché -->
+<div id="content" class="hidden">
 
-</main>
+    <h2>Bienvenue en VPC2</h2>
+
+    <br><br>
+
+    <a href="Maths/index.html">📘 Mathématiques</a><br><br>
+    <a href="Co-enseignement/index.html">📘 Co-enseignement</a><br><br>
+    <a href="Sciences/index.html">🔬 Sciences</a><br><br>
+
+    
+    <a href="../index.html">⬅ Retour accueil</a>
+
+</div>
+
+<script>
+function checkPassword() {
+    var pwd = document.getElementById("password").value;
+
+    if (pwd === "VPC22026") {   // 🔐 Change ici ton mot de passe
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    } else {
+        document.getElementById("error").innerText = "Mot de passe incorrect";
+    }
+}
+</script>
 
 </body>
 </html>
