@@ -64,17 +64,16 @@ main {
 <body>
 
 <header>
-<h1>📘 Coenseignement - PMVTR</h1>
+<h1>🤝 Co-enseignement - PMVTR</h1>
 </header>
 
 <main>
 
-<!-- Chapitres -->
+<!-- Sections -->
 
-<a href="cours.html" class="bouton">📐 Cours</a>
-<a href="exercices.html" class="bouton">📊 Exerices</a>
-<a href="ds.html" class="bouton">📈 Devoirs Surveillés</a>
-//<a href="probabilites.html" class="bouton">🎲 Probabilités</a>//
+<a href="cours.html" class="bouton">📘 Cours</a>
+<a href="exercices.html" class="bouton">✏️ Exercices</a>
+<a href="ds.html" class="bouton">📝 Devoirs surveillés</a>
 
 <!-- Navigation -->
 
