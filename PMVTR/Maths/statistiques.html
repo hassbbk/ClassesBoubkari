@@ -14,17 +14,33 @@ body {
 header { 
     background:#001f3f; 
     color:white; 
-    text-align:center; 
+    text-align:center;
     padding:20px; 
-}
-
-.logo { 
-    max-height:70px; 
 }
 
 main { 
     max-width:900px; 
     margin:40px auto; 
+    padding:20px;
+}
+
+.navigation {
+    margin-bottom:30px;
+}
+
+.nav-btn {
+    display:inline-block;
+    margin-right:15px;
+    padding:8px 15px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.nav-btn:hover {
+    background:#003366;
 }
 
 ul { 
@@ -44,26 +60,23 @@ a {
     text-decoration:none; 
     color:#001f3f; 
 }
-
-.retour { 
-    display:inline-block; 
-    margin-bottom:20px; 
-    color:#001f3f; 
-    font-weight:bold;
-}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="/assets/logo.png" class="logo">
-<h1>📈 Statistiques</h1>
+<h1>📐 Probabilites - PMVTR</h1>
 </header>
 
 <main>
 
-<a href="index.html" class="retour">⬅ Retour</a>
+<div class="navigation">
+    <a href="javascript:history.back()" class="nav-btn">⬅ Page précédente</a>
+    <a href="/ClassesBoubkari/index.html" class="nav-btn">🏠 Accueil</a>
+</div>
+
+<h2>Documents disponibles</h2>
 
 <ul id="listeStatistiques"></ul>
 
