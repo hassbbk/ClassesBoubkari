@@ -1,14 +1,33 @@
 {
   "Electricite": [
+    "11_activite_cours_redressement_exao.pdf",
+    "11_diaporama_redressement_exao.pdf",
+    "14_exos_trace_ecrite_convertir_courant_alternatif_en_courant_continu_et_inversement.pdf",
+    "15_correction_exercices_livre_sciences_page-23.pdf",
+    "18_ds_redressement_tension_alternative.pdf",
+    "01_free_Exercices_electricite_2.pdf",
+    "02_le_courant_alternatif_pour_l_eleve.pdf",
+    "03_le_courant_alternatif_pour_le_professeur.pdf",
+    "Chapitre 1.pdf",
     "Chapitre 1.pdf"
   ],
   "Thermique": [
-    "Chapitre Thermique 1.pdf"
+    "C________________1.pdf"
   ],
   "Mecanique": [
-    "Chapitre Mecanique 1.pdf"
+    "01_pression_au_sein_d_un_liquide.pdf",
+    "02_Caracteriser_une_pression_dans_un_fluide_immobile_prof.pdf",
+    "02_caracteriser_une_pression_dans_un_fluide_immobile_eleve.pdf",
+    "03_corr_des_exercices_livre.pdf",
+    "05_fiche_technique_latis_pro_pression_dans_un_liquide_immobile.pdf",
+    "05_protocole_mesure_pression_avec_Latis_pro.pdf",
+    "07_ds_pression_dans_liquide_force_pressante.pdf",
+    "08_trace_ecrite_pression_prof.pdf",
+    "C08_trace_ecrite_pression_eleve.pdf",
+     "C__________________________1.pdf",
+     "C__________________________2.pdf"
   ],
   "Chimie": [
-    "Chapitre Chimie 1.pdf"
+    "C____________________1.pdf"
   ]
 }
