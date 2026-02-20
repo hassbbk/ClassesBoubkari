@@ -2,7 +2,7 @@
   "Suites": [
     "01_crs_SG_eleve.pdf",
     "01_crs_SG_prof.pdf",
-    "02_somme _k_premiers_termes_exercices_eleve.pdf",
+    "02_somme_k_premiers_termes_exercices_eleve.pdf",
     "03_DS_suites_2.pdf",
     "03_DS_suites_1.pdf",
     "03_Ds_suites_3.pdf"
@@ -21,7 +21,7 @@
     "07_ds_fonctions_second_degre.pdf",
     "07_ds_fonctions_bases_second_degre.pdf",
     "08_exo_evolution_chiffre_affaire.pdf",
-    "09_activite_trajectoire_projectilef"
+    "09_activite_trajectoire_projectile.pdf"
   ],
 
   "Statistiques": [
