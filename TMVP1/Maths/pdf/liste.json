@@ -1,27 +1,27 @@
 {
   "Suites": [
-    "01_ suites numériques G séquence [cours élève]_bis.pdf",
-    "01_suites numériques G séquence [cours Prof].pdf",
-    "02_somme _k_premiers_termes [exercices élève].pdf",
-    "03_DS_suites _2.pdf",
+    "01_crs_SG_eleve.pdf",
+    "01_crs_SG_prof.pdf",
+    "02_somme _k_premiers_termes_exercices_eleve.pdf",
+    "03_DS_suites_2.pdf",
     "03_DS_suites_1.pdf",
     "03_Ds_suites_3.pdf"
   ],
 
   "Fonctions": [
-    "01-Construire un tableau de variations[élève].pdf",
-    "01-Construire un tableau de variations[prof].pdf",
-    "01-Courbes et tab de var.pdf",
-    "02_Entrainement exercice tab var.pdf",
-    "02_fonction du 2d d° chûte d'un objet.pdf",
-    "03_Signe d’une fonction du premier degré.pdf",
-    "04_Signe d’une fonction du second degré.pdf",
-    "06_activité cours fonctions polynome du secon degré.pdf",
-    "07_correction DS f° second degré N2.pdf",
-    "07_DS f° 2ème degré N2.pdf",
-    "07_DS fonction 2ème degré N1.pdf",
-    "08_Evolution du chiffre d'affaires.pdf",
-    "09_Exemple trajectoire projectile.pdf"
+    "01_crs_comment_onstruire_tableau_variation_prof.pdf",
+    "01_crs_comment_onstruire_tableau_variation_eleve.pdf",
+    "01_synthese_courbes_tableau_de_variation.pdf",
+    "02_exo_entrainement__tab_var.pdf",
+    "02_activite_fonction_2d_chute.pdf",
+    "03_crs_signe_fonction_premier_degre.pdf",
+    "04_crs_signe_fonction_second_degre.pdf",
+    "06_activite_coursf_fonctions_polynome_second_degre.pdf",
+    "07_correction_ds_fonctions_second_degre.pdf",
+    "07_ds_fonctions_second_degre.pdf",
+    "07_ds_fonctions_bases_ second_degre.pdf",
+    "08_exo_evolution_chiffre_affaire.pdf",
+    "09_activite_trajectoire projectile.pdf"
   ],
 
   "Statistiques": [
