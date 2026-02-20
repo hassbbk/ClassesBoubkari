@@ -30,7 +30,7 @@
   ],
 
   "Probabilites": [
-    "10_crs_proba_Rappels.pdf",
+    "01_ crs_proba_rappels.pdf",
     "11_crs_proba_trace_ecrite.pdf",
     "13_crs_constitution_jeu_de_cartes.pdf",
     "14_crs_methode_chemin_proba_totale_prof.pdf",
@@ -46,9 +46,7 @@
     "24_exos_corr_brevet_probabilite.pdf",
     "25_exos_proba_pour_ccf.pdf",
     "30_ds1_test_de_connaissances_bases_proba.pdf",
-    "31_ds2_proba.pdf",
-   
-    "__________________________________.pdf"
+    "31_ds2_proba.pdf"
     
   ]
 }
