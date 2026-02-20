@@ -13,12 +13,37 @@
   ],
 
   "Fonctions": [
-    "fonctions_cours1.pdf",
+    "f01_crs_comment_onstruire_tableau_variation_eleve.pdf",
+    "01_crs_comment_onstruire_tableau_variation_prof.pdf",
+    "01_synthese_courbes_tableau_de_variation.pdf",
+    "02_activite_fonction_2d_chute.pdf",
+    "04_crs_signe_fonction_second_degre.pdf",
+    "07_correction_ds_fonctions_second_degre.pdf",
+    "09_activite_trajectoire_projectile.pdf",
+    "10_crs_rappels_sur_les_fonctions_linéaires.pdf",
+    "11_crs_fonctions_bases.pdf",
+    "12_crs_signe_fonction_premier_degré.pdf",
+    "13_crs_fonction_chute.pdf",
+    "14_exo_entrainement_tab_var.pdf",
+    "15_activité_enseignement_agricole_fonctions.pdf",
+    "16_activité_fonction_polynomes_degre_2.pdf",
+    "17_eval_fonctions_petits_exercices.pdf",
+    "18_ds_fonctions_second_degre.pdf",
+    "19_eval_problèmes_et_entrainement_ccf.pdf",
+    "fonctions_exercices1.pdf",
     "fonctions_exercices1.pdf"
   ],
 
   "Statistiques": [
-    "statistiques_cours1.pdf",
+    "300_crs_statistiques_deux_variables_eleve.pdf",
+    "301_crs_statistiques_deux_variables_prof.pdf",
+    "302_crs_application_et_methode.pdf",
+    "303_activite_cours_stat_2_var_livre_livre_foucher.pdf",
+    "304_activite_cours_coefficient_de_determination.pdf",
+    "340_DS-stat2var.pdf",
+    "341_entrainement_ccf_statistiques_deux_variables.pdf",
+    "statistiques_exercices1.pdf",
+    "statistiques_exercices1.pdf",
     "statistiques_exercices1.pdf"
   ],
 
