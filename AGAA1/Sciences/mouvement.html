@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Thermique - AGAA1</title>
+<title>Mouvement - AGAA1</title>
 
 <style>
 body { 
@@ -66,7 +66,7 @@ a {
 <body>
 
 <header>
-<h1>⚡ Thermique - AGAA1</h1>
+<h1>⚡ Mouvement - AGAA1</h1>
 </header>
 
 <main>
@@ -78,7 +78,7 @@ a {
 
 <h2>Documents disponibles</h2>
 
-<ul id="listeThermique"></ul>
+<ul id="listeMouvement"></ul>
 
 </main>
 
@@ -87,19 +87,19 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Thermique"]) return;
+    if (!data["Mouvement"]) return;
 
-    data["Thermique"].forEach(file => {
+    data["Mouvement"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Thermique/" + file;
+        a.href = "pdf/Mouvement/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
 
         li.appendChild(a);
-        document.getElementById("listeThermique").appendChild(li);
+        document.getElementById("listeMouvement").appendChild(li);
     });
 
 })
