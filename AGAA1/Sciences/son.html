@@ -66,7 +66,7 @@ a {
 <body>
 
 <header>
-<h1>⚡ Electricité - VPC2</h1>
+<h1>⚡ Son - AGAA1</h1>
 </header>
 
 
@@ -81,7 +81,7 @@ a {
 
 <h2>Documents disponibles</h2>
 
-<ul id="listeElectricite"></ul>
+<ul id="listeSon"></ul>
 
 </main>
 
@@ -90,19 +90,19 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Electricite"]) return;
+    if (!data["Son"]) return;
 
-    data["Electricite"].forEach(file => {
+    data["Son"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Electricite/" + file;
+        a.href = "pdf/Son/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
 
         li.appendChild(a);
-        document.getElementById("listeElectricite").appendChild(li);
+        document.getElementById("listeSon").appendChild(li);
     });
 
 })
