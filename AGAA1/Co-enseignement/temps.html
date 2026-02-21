@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Exercices - Co-enseignement</title>
+<title>Temps - Co-enseignement</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#eef2f7; }
@@ -20,14 +20,14 @@ a { text-decoration:none; color:#001f3f; }
 
 <header>
 <img src="/assets/logo.png" class="logo">
-<h1>📘 Exercices</h1>
+<h1>📘 Temps</h1>
 </header>
 
 <main>
 
 <a href="index.html" class="retour">⬅ Retour</a>
 
-<ul id="listeExercices"></ul>
+<ul id="listeTemps"></ul>
 
 </main>
 
@@ -35,16 +35,16 @@ a { text-decoration:none; color:#001f3f; }
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
-    if (!data["Exercices"]) return;
+    if (!data["Temps"]) return;
 
-    data["Exercices"].forEach(file => {
+    data["Temps"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "pdf/Exercices/" + file;
+        a.href = "pdf/Temps/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
         li.appendChild(a);
-        document.getElementById("listeExercices").appendChild(li);
+        document.getElementById("listeTemps").appendChild(li);
     });
 });
 </script>
