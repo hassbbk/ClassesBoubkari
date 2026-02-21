@@ -37,7 +37,7 @@ fetch("pdf/liste.json")
 .then(data => {
     if (!data["CalculNumerique"]) return;
 
-    data["Cours"].forEach(file => {
+    data["CalculNumerique"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = "pdf/CalculNumerique/" + file;
