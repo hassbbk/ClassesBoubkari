@@ -1,11 +1,21 @@
 {
   "CalculNumerique": [
-    "a_____________1.pdf",
+    "00_test_initial.pdf",
+    "01_addition-1.pdf",
+    "01_addition-2.pdf",
+    "02_fiche-exercices-sur-la-soustraction-sans-retenue.pdf",
+    "03_Fiches-Soustractions-posees.pdf",
+    "04_La-soustraction-posée.pdf",
+    "06_eval_addition-soustraction.pdf",
     "a______________2.pdf"
   ],
   "Temps": [
-    "____________exo1_______________.pdf",
-    "_____________exo2_______________.pdf"
+    "01_cours_Mesure_Temps.pdf",
+    "01_exo_entrainement_temps_vitesses.pdf",
+    "02_ds1_vitesse_temps.pdf",
+    "03_ds2_vitesse_temps.pdf",
+    "04_ds1_vitesse_temps_correction.pdf",
+    "05_tp1_conversion_des_units_de_temps_2013_elve.pdf"
   ],
   "Unites": [
     "_________________ds1______________________.pdf",
