@@ -3,19 +3,24 @@
     "01_cours_la_bonne_affaire.pdf",
     "02_cours_Facture_Excel_Alarmes.pdf",
     "04_activite_Facture_garage.pdf",
-    "_________15________.pdf"
-    
-  ],
-  "Exercices": [
     "03_Factures_carrosserie_mecanique.pdf",
     "05_Faire_les_factures_pour_les_clients.pdf",
     "07_exo_facture_mecano_C4.pdf",
+    "06_ds_etablir_facture_maintenance_auto.pdf",
+    "06_ds_Facturerevision_auto.pdf",
+    "_________15________.pdf"
+    
+  ],
+
+  
+  "Exercices": [
     "__________16______________.pdf",
     "__________17______________.pdf"
   ],
+
+  
   "DS": [
-    "06_ds_etablir_facture_maintenance_auto.pdf",
-    "06_ds_Facturerevision_auto.pdf",
+    
     "__________17______________.pdf"
   ]
 }
