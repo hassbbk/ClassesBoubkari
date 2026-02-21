@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Cours - Co-enseignement</title>
+<title>CalculNumerique - Co-enseignement</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#eef2f7; }
@@ -20,7 +20,7 @@ a { text-decoration:none; color:#001f3f; }
 
 <header>
 <img src="/assets/logo.png" class="logo">
-<h1>📘 Cours</h1>
+<h1>📘 CalculNumerique</h1>
 </header>
 
 <main>
@@ -35,16 +35,16 @@ a { text-decoration:none; color:#001f3f; }
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
-    if (!data["Cours"]) return;
+    if (!data["CalculNumerique"]) return;
 
     data["Cours"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "pdf/Cours/" + file;
+        a.href = "pdf/CalculNumerique/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
         li.appendChild(a);
-        document.getElementById("listeCours").appendChild(li);
+        document.getElementById("listeCalculNumerique").appendChild(li);
     });
 });
 </script>
