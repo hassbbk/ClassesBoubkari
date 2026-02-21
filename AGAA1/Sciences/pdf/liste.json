@@ -1,14 +1,31 @@
 {
-  "Electricite": [
+  "Son": [
+    "01_cours_acoustique_eleve",
+    "01_cours_acoustique_prof.pdf",
+    "03_exo_acoustique_eleve.pdf",
+    "03_exo_mouvement_livre",
+    "04_Exposes_sur_le_son_cap.pdf",
+    "Chapitre 1.pdf",
     "Chapitre 1.pdf"
   ],
-  "Thermique": [
+  "Mouvement": [
+    "01_Cours_mouvement.pdf",
+    "01_Cours_mouvement_prof.pdf",
+    "02_exercicesdiriges1_vitesse_distance_temps.pdf",
+    "03_Eval_mouvement.pdf",
+    "04_exo_Exercices_livre_CAP_mouvement.pdf",
+    "04_vitesse_mouvement_exercices_corriges_controle_evaluation_sujet_enonce.pdf",
     "Chapitre Thermique 1.pdf"
   ],
   "Mecanique": [
     "Chapitre Mecanique 1.pdf"
   ],
   "Chimie": [
+    "01_activite_cours_Atome_molécule_livre.pdf",
+    "03_ds_Atome_molécule1.pdf",
+    "02_correction_exo_Atome_Molecule_livre.pdf",
+    "Chapitre Chimie 1.pdf",
+    "04_Trace_ecrite_atome_molecule_Constitution_de_la_matière.pdf",
     "Chapitre Chimie 1.pdf"
   ]
 }
