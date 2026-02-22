@@ -43,6 +43,21 @@ main {
     background:#003366;
 }
 
+.section-title {
+    margin-top:40px;
+    padding:10px;
+    color:white;
+    border-radius:5px;
+}
+
+.oxydo {
+    background:#c1121f;
+}
+
+.acide {
+    background:#0077b6;
+}
+
 ul { 
     list-style:none; 
     padding:0; 
@@ -76,9 +91,13 @@ a {
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
 
-<h2>Documents disponibles</h2>
+<!-- OXYDO REDUCTION -->
+<h2 class="section-title oxydo">🔴 Oxydo-réduction</h2>
+<ul id="listeOxydo"></ul>
 
-<ul id="listeChimie"></ul>
+<!-- ACIDE BASE -->
+<h2 class="section-title acide">🔵 Acide - Base</h2>
+<ul id="listeAcide"></ul>
 
 </main>
 
@@ -89,18 +108,37 @@ fetch("pdf/liste.json")
 
     if (!data["Chimie"]) return;
 
-    data["Chimie"].forEach(file => {
+    // OXYDO
+    if (data["Chimie"]["Oxydo-reduction"]) {
+        data["Chimie"]["Oxydo-reduction"].forEach(file => {
 
-        const li = document.createElement("li");
-        const a = document.createElement("a");
+            const li = document.createElement("li");
+            const a = document.createElement("a");
 
-        a.href = "pdf/Chimie/" + file;
-        a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+            a.href = "pdf/Chimie/Oxydo-reduction/" + file;
+            a.textContent = file.replace(".pdf","");
+            a.target = "_blank";
 
-        li.appendChild(a);
-        document.getElementById("listeChimie").appendChild(li);
-    });
+            li.appendChild(a);
+            document.getElementById("listeOxydo").appendChild(li);
+        });
+    }
+
+    // ACIDE BASE
+    if (data["Chimie"]["Acide-base"]) {
+        data["Chimie"]["Acide-base"].forEach(file => {
+
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+
+            a.href = "pdf/Chimie/Acide-base/" + file;
+            a.textContent = file.replace(".pdf","");
+            a.target = "_blank";
+
+            li.appendChild(a);
+            document.getElementById("listeAcide").appendChild(li);
+        });
+    }
 
 })
 .catch(error => {
