@@ -24,18 +24,24 @@
     "07_ds_pression_dans_liquide_force_pressante.pdf",
     "08_trace_ecrite_pression_prof.pdf",
     "08_trace_ecrite_pression_eleve.pdf",
-     "31_Activite_ Poussee_Archi_Plongeur.pdf",
-     "32_trace_ecrite_Poussee_Archimede.pdf",
+    "31_Activite_ Poussee_Archi_Plongeur.pdf",
+    "32_trace_ecrite_Poussee_Archimede.pdf",
     "33-exos_Poussee_Archimede.pdf",
     "m__________________________2.pdf",
     "m__________________________2.pdf",
     "m__________________________2.pdf"
   ],
-  "Chimie": [
-    "C_________chimie___________1.pdf",
-    "C_____________chimie________2.pdf",
-    "C___________chimie_s_________3.pdf"
-  ],
+
+  "Chimie": {
+    "Oxydo-reduction": [
+      "C_________chimie___________1.pdf"
+    ],
+    "Acide-base": [
+      "C_____________chimie________2.pdf",
+      "C___________chimie_s_________3.pdf"
+    ]
+  },
+
   "CcfSciences": [
     "C_________ccf___________1.pdf",
     "C__________ccf________2.pdf",
