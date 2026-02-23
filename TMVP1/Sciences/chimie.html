@@ -43,24 +43,35 @@ main {
     background:#003366;
 }
 
-.section-title {
-    margin-top:40px;
-    padding:10px;
+/* BOUTONS SECTIONS */
+.section-btn {
+    width:100%;
+    padding:15px;
+    margin-bottom:10px;
+    border:none;
     color:white;
+    font-size:16px;
+    text-align:left;
     border-radius:5px;
+    cursor:pointer;
 }
 
-.oxydo {
+.oxydo-btn {
     background:#c1121f;
 }
 
-.acide {
+.acide-btn {
     background:#0077b6;
+}
+
+.section-btn:hover {
+    opacity:0.9;
 }
 
 ul { 
     list-style:none; 
     padding:0; 
+    display:none;   /* MASQUÉ PAR DÉFAUT */
 }
 
 li { 
@@ -91,17 +102,28 @@ a {
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
 
-<!-- OXYDO REDUCTION -->
-<h2 class="section-title oxydo">🔴 Oxydo-réduction</h2>
+<!-- BOUTONS -->
+<button class="section-btn oxydo-btn" onclick="toggleSection('listeOxydo')">
+🔴 Oxydo-réduction
+</button>
 <ul id="listeOxydo"></ul>
 
-<!-- ACIDE BASE -->
-<h2 class="section-title acide">🔵 Acide - Base</h2>
+<button class="section-btn acide-btn" onclick="toggleSection('listeAcide')">
+🔵 Acide - Base
+</button>
 <ul id="listeAcide"></ul>
 
 </main>
 
 <script>
+
+// OUVERTURE / FERMETURE
+function toggleSection(id) {
+    const section = document.getElementById(id);
+    section.style.display = (section.style.display === "block") ? "none" : "block";
+}
+
+// CHARGEMENT JSON
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
