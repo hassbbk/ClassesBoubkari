@@ -43,23 +43,21 @@ main {
     background:#003366;
 }
 
-ul { 
-    list-style:none; 
-    padding:0; 
+.section-link {
+    display:block;
+    padding:20px;
+    margin-bottom:15px;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:18px;
 }
 
-li { 
-    background:white; 
-    padding:15px; 
-    margin-bottom:10px; 
-    border-left:4px solid #001f3f; 
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
+.circuit { background:#0077b6; }
+.puissance { background:#c1121f; }
 
-a { 
-    text-decoration:none; 
-    color:#001f3f; 
-}
+.section-link:hover { opacity:0.9; }
+
 </style>
 </head>
 
@@ -76,37 +74,15 @@ a {
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
 
-<h2>Documents disponibles</h2>
+<a href="electricite-circuit.html" class="section-link circuit">
+⚡ Circuit électrique
+</a>
 
-<ul id="listeElectricite"></ul>
+<a href="electricite-puissance.html" class="section-link puissance">
+🔋 Puissance - Énergie
+</a>
 
 </main>
-
-<script>
-fetch("pdf/liste.json")
-.then(response => response.json())
-.then(data => {
-
-    if (!data["Electricite"]) return;
-
-    data["Electricite"].forEach(file => {
-
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-
-        a.href = "pdf/Electricite/" + file;
-        a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
-
-        li.appendChild(a);
-        document.getElementById("listeElectricite").appendChild(li);
-    });
-
-})
-.catch(error => {
-    console.log("Erreur chargement liste.json :", error);
-});
-</script>
 
 </body>
 </html>
