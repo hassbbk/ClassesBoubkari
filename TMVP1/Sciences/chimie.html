@@ -43,48 +43,26 @@ main {
     background:#003366;
 }
 
-/* BOUTONS SECTIONS */
-.section-btn {
-    width:100%;
-    padding:15px;
-    margin-bottom:10px;
-    border:none;
+.section-link {
+    display:block;
+    padding:20px;
+    margin-bottom:15px;
     color:white;
-    font-size:16px;
-    text-align:left;
+    text-decoration:none;
     border-radius:5px;
-    cursor:pointer;
+    font-size:18px;
 }
 
-.oxydo-btn {
+.oxydo {
     background:#c1121f;
 }
 
-.acide-btn {
+.acide {
     background:#0077b6;
 }
 
-.section-btn:hover {
+.section-link:hover {
     opacity:0.9;
-}
-
-ul { 
-    list-style:none; 
-    padding:0; 
-    display:none;   /* MASQUÉ PAR DÉFAUT */
-}
-
-li { 
-    background:white; 
-    padding:15px; 
-    margin-bottom:10px; 
-    border-left:4px solid #001f3f; 
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-a { 
-    text-decoration:none; 
-    color:#001f3f; 
 }
 </style>
 </head>
@@ -102,71 +80,15 @@ a {
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
 
-<!-- BOUTONS -->
-<button class="section-btn oxydo-btn" onclick="toggleSection('listeOxydo')">
+<a href="chimie-oxydo.html" class="section-link oxydo">
 🔴 Oxydo-réduction
-</button>
-<ul id="listeOxydo"></ul>
+</a>
 
-<button class="section-btn acide-btn" onclick="toggleSection('listeAcide')">
+<a href="chimie-acide.html" class="section-link acide">
 🔵 Acide - Base
-</button>
-<ul id="listeAcide"></ul>
+</a>
 
 </main>
-
-<script>
-
-// OUVERTURE / FERMETURE
-function toggleSection(id) {
-    const section = document.getElementById(id);
-    section.style.display = (section.style.display === "block") ? "none" : "block";
-}
-
-// CHARGEMENT JSON
-fetch("pdf/liste.json")
-.then(response => response.json())
-.then(data => {
-
-    if (!data["Chimie"]) return;
-
-    // OXYDO
-    if (data["Chimie"]["Oxydo-reduction"]) {
-        data["Chimie"]["Oxydo-reduction"].forEach(file => {
-
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-
-            a.href = "pdf/Chimie/Oxydo-reduction/" + file;
-            a.textContent = file.replace(".pdf","");
-            a.target = "_blank";
-
-            li.appendChild(a);
-            document.getElementById("listeOxydo").appendChild(li);
-        });
-    }
-
-    // ACIDE BASE
-    if (data["Chimie"]["Acide-base"]) {
-        data["Chimie"]["Acide-base"].forEach(file => {
-
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-
-            a.href = "pdf/Chimie/Acide-base/" + file;
-            a.textContent = file.replace(".pdf","");
-            a.target = "_blank";
-
-            li.appendChild(a);
-            document.getElementById("listeAcide").appendChild(li);
-        });
-    }
-
-})
-.catch(error => {
-    console.log("Erreur chargement liste.json :", error);
-});
-</script>
 
 </body>
 </html>
