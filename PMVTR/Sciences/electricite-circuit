@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Circuit électrique - PMVTR</title>
+
+<style>
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
+}
+
+header { 
+    background:#0077b6; 
+    color:white; 
+    text-align:center;
+    padding:20px; 
+}
+
+main { 
+    max-width:900px; 
+    margin:40px auto; 
+    padding:20px;
+}
+
+.nav-btn {
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.nav-btn:hover {
+    background:#003366;
+}
+
+ul { 
+    list-style:none; 
+    padding:0; 
+}
+
+li { 
+    background:white; 
+    padding:15px; 
+    margin-bottom:10px; 
+    border-left:4px solid #0077b6; 
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+a { 
+    text-decoration:none; 
+    color:#001f3f; 
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⚡ Circuit électrique</h1>
+</header>
+
+<main>
+
+<a href="electricite.html" class="nav-btn">⬅ Retour Electricité</a>
+
+<ul id="listeCircuit"></ul>
+
+</main>
+
+<script>
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
+
+    if (!data["Electricite"] || !data["Electricite"]["Circuit-electrique"]) return;
+
+    data["Electricite"]["Circuit-electrique"].forEach(file => {
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        a.href = "pdf/Electricite/Circuit-electrique/" + file;
+        a.textContent = file.replace(".pdf","");
+        a.target = "_blank";
+
+        li.appendChild(a);
+        document.getElementById("listeCircuit").appendChild(li);
+    });
+
+})
+.catch(error => {
+    console.log("Erreur chargement liste.json :", error);
+});
+</script>
+
+</body>
+</html>
