@@ -2,61 +2,79 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Mathématiques - TMVP1</title>
+<title>Maths - TMVP1</title>
 
 <style>
-body { 
-    font-family: Arial; 
-    margin:0; 
-    background:#eef2f7; 
+body {
+    font-family: Arial;
+    margin:0;
+    background:#eef2f7;
+}
+
+header {
+    background:#001f3f;
+    color:white;
     text-align:center;
+    padding:25px;
 }
 
-header { 
-    background:#001f3f; 
-    color:white; 
-    padding:30px; 
+main {
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
 }
 
-main { 
-    margin-top:40px; 
-}
-
-.bouton {
-    display:inline-block;
-    margin:20px;
-    padding:20px 40px;
-    background:white;
-    border-radius:10px;
+/* ===== Bandeau Infos ===== */
+.info-banner {
+    display:block;
+    background:#ffb703;
+    color:#000;
+    padding:18px;
+    margin-bottom:40px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
     text-decoration:none;
-    color:#001f3f;
+    border-radius:6px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.info-banner:hover {
+    background:#fb8500;
+}
+
+/* ===== Cartes matières ===== */
+.section-link {
+    display:block;
+    padding:20px;
+    margin-bottom:20px;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
     font-size:20px;
     font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transition:0.3s;
 }
 
-.bouton:hover {
-    background:#001f3f;
-    color:white;
+.section-link:hover {
+    transform:translateY(-3px);
+    opacity:0.95;
 }
 
-.navigation {
-    margin-top:50px;
-}
+/* Couleurs matières */
+.elec { background:#0077b6; }
+.meca { background:#6a4c93; }
+.therm { background:#2a9d8f; }
+.chimie { background:#d62828; }
+.ccf { background:#3a86ff; }
 
-.nav-btn {
-    display:inline-block;
-    margin:10px;
-    padding:10px 20px;
-    background:#001f3f;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    font-size:16px;
-}
-
-.nav-btn:hover {
-    background:#003366;
+footer {
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+    color:#555;
 }
 </style>
 </head>
@@ -64,27 +82,47 @@ main {
 <body>
 
 <header>
-<h1>📘 Mathématiques - TMVP1</h1>
+<h1>🔬 Sciences - TMVP1</h1>
+<p>Espace pédagogique de la classe</p>
 </header>
 
 <main>
-
-<!-- Chapitres -->
-
-<a href="suites.html" class="bouton">📐 Suites</a>
-<a href="fonctions.html" class="bouton">📊 Fonctions</a>
-<a href="statistiques.html" class="bouton">📈 Statistiques</a>
-<a href="probabilites.html" class="bouton">🎲 Probabilités</a>
-<a href="ccfmaths.html" class="bouton">📘 CcfMaths</a>
-
-<!-- Navigation -->
-
 <div class="navigation">
-    <a href="../index.html" class="nav-btn">⬅ Retour à la classe</a>
+    <a href="javascript:history.back()" class="nav-btn">⬅ Page précédente</a>
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
+<!-- ===== Bandeau Infos ===== -->
+    
+<a href="infos.html" class="info-banner">
+📌 Informations importantes – Cliquez ici
+</a>
+
+<!-- ===== Matières ===== -->
+<a href="electricite.html" class="section-link elec">
+⚡ Electricité
+</a>
+
+<a href="mecanique.html" class="section-link meca">
+⚙ Mécanique
+</a>
+
+<a href="thermique.html" class="section-link therm">
+🌡 Thermique
+</a>
+
+<a href="chimie.html" class="section-link chimie">
+🧪 Chimie
+</a>
+
+<a href="ccfsciences.html" class="section-link ccf">
+📝 CCF Sciences
+</a>
 
 </main>
+
+<footer>
+Dernière mise à jour : 2026
+</footer>
 
 </body>
 </html>
