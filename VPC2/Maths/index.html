@@ -2,38 +2,71 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Informations - Mathématiques VPC2</title>
+<title>Mathématiques - VPC2</title>
 
 <style>
 body { 
     font-family: Arial; 
     margin:0; 
     background:#eef2f7; 
+    text-align:center;
 }
 
 header { 
     background:#6a4c93; 
     color:white; 
-    text-align:center;
     padding:30px; 
 }
 
 main { 
-    max-width:900px;
+    max-width:1000px;
     margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:8px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-h2 {
-    color:#6a4c93;
-}
-
-.navigation {
+/* ===== Bandeau Infos ===== */
+.info-banner {
+    display:block;
+    background:#ffb703;
+    color:#000;
+    padding:18px;
+    margin-bottom:40px;
     text-align:center;
-    margin-top:40px;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:6px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.info-banner:hover {
+    background:#fb8500;
+}
+
+/* ===== Boutons chapitres ===== */
+.bouton {
+    display:inline-block;
+    margin:20px;
+    padding:20px 40px;
+    background:white;
+    border-radius:10px;
+    text-decoration:none;
+    color:#6a4c93;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.bouton:hover {
+    background:#6a4c93;
+    color:white;
+    transform:translateY(-3px);
+}
+
+/* ===== Navigation ===== */
+.navigation {
+    margin-top:50px;
 }
 
 .nav-btn {
@@ -44,6 +77,7 @@ h2 {
     color:white;
     text-decoration:none;
     border-radius:5px;
+    font-size:16px;
 }
 
 .nav-btn:hover {
@@ -55,31 +89,25 @@ h2 {
 <body>
 
 <header>
-<h1>📌 Informations – Mathématiques VPC2</h1>
+<h1>📘 Mathématiques - VPC2</h1>
 </header>
 
 <main>
 
-<h2>Consignes générales</h2>
-<p>
-➜ Cahier obligatoire à chaque séance.<br>
-➜ Calculatrice autorisée selon les chapitres.<br>
-➜ Les devoirs seront indiqués ici.
-</p>
+<!-- ===== Bandeau Infos ===== -->
+<a href="infos.html" class="info-banner">
+📌 Informations importantes – Cliquez ici
+</a>
 
-<h2>Travail à faire</h2>
-<p>
-📅 Prochain contrôle : …<br>
-📚 Exercices à préparer : …
-</p>
+<!-- ===== Chapitres ===== -->
+<a href="suites.html" class="bouton">📐 Suites</a>
+<a href="fonctions.html" class="bouton">📊 Fonctions</a>
+<a href="statistiques.html" class="bouton">📈 Statistiques</a>
+<a href="probabilites.html" class="bouton">🎲 Probabilités</a>
+<a href="ccfmaths.html" class="bouton">📝 CCF Maths</a>
 
-<h2>Informations diverses</h2>
-<p>
-Toutes les consignes importantes seront mises à jour sur cette page.
-</p>
-
+<!-- ===== Navigation ===== -->
 <div class="navigation">
-    <a href="index.html" class="nav-btn">⬅ Retour aux chapitres</a>
     <a href="../index.html" class="nav-btn">⬅ Retour à la classe</a>
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
