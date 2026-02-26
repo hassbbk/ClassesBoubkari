@@ -83,7 +83,7 @@ a {
 </main>
 
 <script>
-fetch("../pdf/liste.json")
+fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
@@ -94,7 +94,7 @@ fetch("../pdf/liste.json")
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "../pdf/Mecanique/" + file;
+        a.href = "pdf/Mecanique/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
 
