@@ -87,7 +87,7 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Thermique"]) return;
+    if (!data["Son"]) return;
 
     data["Son"].forEach(file => {
 
