@@ -8,7 +8,7 @@
     "103_lois_elec_prof.pdf",
     "104_trace_ecrite_loi_des_tensions_et_intensités.pdf",
     "105_exo_loi_des_tensions_et_intensités.pdf",
-    "106_ds-circuit-electrique",
+    "106_ds-circuit-electrique.pdf",
     "107_exo-circuit-electrique-entrainement_cap.pdf",
     "Chapitre 1.pdf"
   ],
@@ -17,14 +17,12 @@
   ],
   "Mecanique": [
     "01_tp_relation_masse_poids.pdf",
-    "Chapitre Mecanique 1.pdf",
     "Chapitre Mecanique 1.pdf"
   ],
   "Chimie": [
     "Chapitre Chimie 1.pdf"
-  ]
-},
-"CcfSciences": [
+  ],
+  "CcfSciences": [
     "C_________ccf___________1.pdf",
     "C__________ccf________2.pdf",
     "C__________ccf_________3.pdf"
