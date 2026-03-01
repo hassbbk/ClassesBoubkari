@@ -17,6 +17,7 @@ main { max-width:900px; margin:40px auto; padding:20px; }
     color:white;
     text-decoration:none;
     border-radius:5px;
+    font-size:14px;
 }
 
 ul { list-style:none; padding:0; }
@@ -24,7 +25,7 @@ ul { list-style:none; padding:0; }
 li {
     background:white;
     padding:15px;
-    margin-bottom:12px;
+    margin-bottom:10px;
     border-left:4px solid #0077b6;
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
@@ -43,12 +44,12 @@ a { text-decoration:none; color:#001f3f; font-weight:bold; }
 
 <a href="fonctions.html" class="nav-btn">⬅ Retour Fonctions</a>
 
-<ul id="listeBases"></ul>
+<ul id="liste"></ul>
 
 </main>
 
 <script>
-fetch("../pdf/liste.json")
+fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
@@ -59,15 +60,16 @@ data["Fonctions"]["Fonctions-bases"].forEach(file => {
     const li = document.createElement("li");
     const a = document.createElement("a");
 
-    a.href = "../pdf/Fonctions-bases/" + file;
+    a.href = "pdf/Fonctions/Fonctions-bases/" + file;
     a.textContent = file.replace(".pdf","");
     a.target = "_blank";
 
     li.appendChild(a);
-    document.getElementById("listeBases").appendChild(li);
+    document.getElementById("liste").appendChild(li);
 });
 
-});
+})
+.catch(error => console.log("Erreur JSON :", error));
 </script>
 
 </body>
