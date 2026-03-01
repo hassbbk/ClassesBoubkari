@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TMVP1 - Classes Boubkari</title>
+<title>TMVP1- Classes Boubkari</title>
 
 <style>
 body {
@@ -41,6 +41,7 @@ button {
     border:none;
     cursor:pointer;
     margin-left:10px;
+    border-radius:5px;
 }
 
 button:hover {
@@ -50,13 +51,50 @@ button:hover {
 .hidden {
     display:none;
 }
+
+/* ===== Boutons matières ===== */
+
+.matiere {
+    display:block;
+    max-width:400px;
+    margin:20px auto;
+    padding:18px;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    color:white;
+    border-radius:6px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.matiere:hover {
+    transform:translateY(-3px);
+}
+
+.maths { background:#6a4c93; }
+.coens { background:#2a9d8f; }
+.sciences { background:#0077b6; }
+
+.retour {
+    display:inline-block;
+    margin-top:40px;
+    padding:10px 20px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.retour:hover {
+    background:#003366;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <!-- Logo du lycée -->
     <img src="../assets/logo1.png" class="logo" alt="Logo Lycée">
     <h1>Classe TMVP1</h1>
 </header>
@@ -75,14 +113,21 @@ button:hover {
 
     <h2>Bienvenue en TMVP1</h2>
 
-    <br><br>
+    <a href="Maths/index.html" class="matiere maths">
+        📘 Mathématiques
+    </a>
 
-    <a href="Maths/index.html">📘 Mathématiques</a><br><br>
-    <a href="Co-enseignement/index.html">📘 Co-enseignement</a><br><br>
-    <a href="Sciences/index.html">🔬 Sciences</a><br><br>
+    <a href="Co-enseignement/index.html" class="matiere coens">
+        🤝 Co-enseignement
+    </a>
 
-    
-    <a href="../index.html">⬅ Retour accueil</a>
+    <a href="Sciences/index.html" class="matiere sciences">
+        🔬 Sciences
+    </a>
+
+    <a href="../index.html" class="retour">
+        ⬅ Retour accueil général
+    </a>
 
 </div>
 
@@ -90,7 +135,7 @@ button:hover {
 function checkPassword() {
     var pwd = document.getElementById("password").value;
 
-    if (pwd === "TMVP12026") {   // 🔐 Change ici ton mot de passe
+    if (pwd === "TMVP12026") {
         document.getElementById("login").style.display = "none";
         document.getElementById("content").style.display = "block";
     } else {
@@ -101,4 +146,3 @@ function checkPassword() {
 
 </body>
 </html>
-
