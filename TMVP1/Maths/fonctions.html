@@ -9,60 +9,60 @@ body {
     font-family: Arial; 
     margin:0; 
     background:#eef2f7; 
-    text-align:center;
 }
 
 header { 
-    background:#6a4c93; 
+    background:#001f3f; 
     color:white; 
-    padding:30px; 
+    text-align:center;
+    padding:20px; 
 }
 
 main { 
-    max-width:1000px;
-    margin:50px auto;
+    max-width:900px; 
+    margin:40px auto; 
+    padding:20px;
 }
 
-/* Sous-sections */
-.section-link {
-    display:block;
-    margin:30px auto;
-    padding:30px;
-    width:70%;
-    background:white;
-    border-radius:12px;
-    text-decoration:none;
-    color:#6a4c93;
-    font-size:24px;
-    font-weight:bold;
-    box-shadow:0 6px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.section-link:hover {
-    background:#6a4c93;
-    color:white;
-    transform:translateY(-5px);
-}
-
-/* Navigation */
 .navigation {
-    margin-top:60px;
+    margin-bottom:30px;
 }
 
 .nav-btn {
     display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    background:#6a4c93;
+    margin-right:15px;
+    padding:8px 15px;
+    background:#001f3f;
     color:white;
     text-decoration:none;
-    border-radius:6px;
-    font-size:16px;
+    border-radius:5px;
+    font-size:14px;
 }
 
 .nav-btn:hover {
-    background:#4a2f6f;
+    background:#003366;
+}
+
+.section-link {
+    display:block;
+    padding:20px;
+    margin-bottom:15px;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:18px;
+}
+
+.derivees {
+    background:#c1121f;
+}
+
+.bases {
+    background:#0077b6;
+}
+
+.section-link:hover {
+    opacity:0.9;
 }
 </style>
 </head>
@@ -70,25 +70,25 @@ main {
 <body>
 
 <header>
-<h1>📐 Fonctions - TMVP1</h1>
-<p>Chapitre divisé en deux parties</p>
+<h1>⚡ Fonctions - TMVP1</h1>
 </header>
 
 <main>
 
-<a href="fonctions-bases.html" class="section-link">
-📘 Fonctions – Bases
-</a>
-
-<a href="fonctions-derivees.html" class="section-link">
-📗 Fonctions – Dérivées
-</a>
-
 <div class="navigation">
-    <a href="index.html" class="nav-btn">⬅ Retour Maths</a>
+    <a href="javascript:history.back()" class="nav-btn">⬅ Page précédente</a>
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
 
+<a href="fonctiions-derivees.html" class="section-link derivees">
+🔴 Fonction - derivees
+</a>
+
+<a href="Fonctions-bases.html" class="section-link bases">
+🔵 Fonctions - bases
+</a>
+
 </main>
+
 </body>
 </html>
