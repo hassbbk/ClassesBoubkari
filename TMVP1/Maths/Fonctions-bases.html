@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Fonctions - Bases - TMVP1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>📘 Fonctions - Bases</h1>
+</header>
+
+<main>
+<ul id="listeBases"></ul>
+</main>
+
+<script>
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
+
+    if (!data["Fonctions-bases"]) return;
+
+    data["Fonctions-bases"].forEach(file => {
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        a.href = "pdf/Fonctions/Fonctions-bases/" + file;
+        a.textContent = file.replace(".pdf","");
+        a.target = "_blank";
+
+        li.appendChild(a);
+        document.getElementById("listeBases").appendChild(li);
+    });
+
+});
+</script>
+
+</body>
+</html>
