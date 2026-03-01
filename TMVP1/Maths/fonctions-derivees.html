@@ -2,34 +2,41 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Fonctions - Dérivées - TMVP1</title>
-
+<title>Fonctions-derivees - TMVP1</title>
 <style>
-/* EXACTEMENT le même CSS que la page Bases */
 body { font-family: Arial; margin:0; background:#eef2f7; }
-header { background:#6a4c93; color:white; text-align:center; padding:25px; }
+header { background:#c1121f; color:white; text-align:center; padding:20px; }
 main { max-width:900px; margin:40px auto; padding:20px; }
-.navigation { margin-bottom:30px; }
-.nav-btn { display:inline-block; margin-right:15px; padding:8px 15px; background:#6a4c93; color:white; text-decoration:none; border-radius:5px; }
-.nav-btn:hover { background:#4a2f6f; }
+.nav-btn {
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:14px;
+}
 ul { list-style:none; padding:0; }
-li { background:white; padding:15px; margin-bottom:12px; border-left:5px solid #6a4c93; box-shadow:0 3px 8px rgba(0,0,0,0.1); }
-a { text-decoration:none; color:#6a4c93; font-weight:bold; }
+li {
+    background:white;
+    padding:15px;
+    margin-bottom:10px;
+    border-left:4px solid #c1121f;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+a { text-decoration:none; color:#001f3f; }
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>📗 Fonctions – Dérivées</h1>
+<h1>🔴 Fonctions-derivees</h1>
 </header>
 
 <main>
 
-<div class="navigation">
-    <a href="Fonctions.html" class="nav-btn">⬅ Retour Fonctions</a>
-    <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
-</div>
+<a href="fonctions.html" class="nav-btn">⬅ Retour Fonctions</a>
 
 <ul id="listeDerivees"></ul>
 
@@ -40,20 +47,20 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Fonctions-derivees"]) return;
+if (!data["Fonctions"]["Fonctions-derivees"]) return;
 
-    data["Fonctions-derivees"].forEach(file => {
+data["Fonctions"]["Fonctions-derivees"].forEach(file => {
 
-        const li = document.createElement("li");
-        const a = document.createElement("a");
+    const li = document.createElement("li");
+    const a = document.createElement("a");
 
-        a.href = "pdf/Fonctions/Fonctions-derivees/" + file;
-        a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+    a.href = "pdf/Fonctions/Fonctions-derivees/" + file;
+    a.textContent = file.replace(".pdf","");
+    a.target = "_blank";
 
-        li.appendChild(a);
-        document.getElementById("listeDerivees").appendChild(li);
-    });
+    li.appendChild(a);
+    document.getElementById("listeDerivees").appendChild(li);
+});
 
 });
 </script>
