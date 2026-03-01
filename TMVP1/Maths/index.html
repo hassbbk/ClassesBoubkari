@@ -2,127 +2,87 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Maths - TMVP1</title>
+<title>Fonctions - TMVP1</title>
 
 <style>
-body {
-    font-family: Arial;
-    margin:0;
-    background:#eef2f7;
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
 }
 
-header {
-    background:#001f3f;
-    color:white;
+header { 
+    background:#001f3f; 
+    color:white; 
     text-align:center;
-    padding:25px;
+    padding:25px; 
 }
 
-main {
-    max-width:1000px;
-    margin:40px auto;
+main { 
+    max-width:900px; 
+    margin:40px auto; 
     padding:20px;
 }
 
-/* ===== Bandeau Infos ===== */
-.info-banner {
-    display:block;
-    background:#ffb703;
-    color:#000;
-    padding:18px;
-    margin-bottom:40px;
-    text-align:center;
-    font-size:18px;
-    font-weight:bold;
+.navigation {
+    margin-bottom:30px;
+}
+
+.nav-btn {
+    display:inline-block;
+    margin-right:15px;
+    padding:8px 15px;
+    background:#001f3f;
+    color:white;
     text-decoration:none;
-    border-radius:6px;
-    box-shadow:0 3px 8px rgba(0,0,0,0.15);
-    transition:0.3s;
+    border-radius:5px;
+    font-size:14px;
 }
 
-.info-banner:hover {
-    background:#fb8500;
+.nav-btn:hover {
+    background:#003366;
 }
 
-/* ===== Cartes matières ===== */
 .section-link {
     display:block;
     padding:20px;
-    margin-bottom:20px;
+    margin-bottom:15px;
     color:white;
     text-decoration:none;
     border-radius:6px;
-    font-size:20px;
+    font-size:18px;
     font-weight:bold;
-    box-shadow:0 3px 8px rgba(0,0,0,0.15);
-    transition:0.3s;
 }
 
-.section-link:hover {
-    transform:translateY(-3px);
-    opacity:0.95;
-}
+.derivees { background:#c1121f; }
+.bases { background:#0077b6; }
 
-/* Couleurs matières */
-.suites { background:#0077b6; }
-.fonc { background:#6a4c93; }
-.proba { background:#2a9d8f; }
-.stat { background:#d62828; }
-.ccf { background:#3a86ff; }
-
-footer {
-    text-align:center;
-    padding:30px;
-    font-size:14px;
-    color:#555;
-}
+.section-link:hover { opacity:0.9; }
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>🔬 Maths - TMVP1</h1>
-<p>Espace pédagogique de la classe</p>
+<h1>📘 Fonctions - TMVP1</h1>
 </header>
 
 <main>
+
 <div class="navigation">
-    <a href="javascript:history.back()" class="nav-btn">⬅ Page précédente</a>
+    <a href="../index.html" class="nav-btn">⬅ Retour Maths</a>
     <a href="../../index.html" class="nav-btn">🏠 Accueil</a>
 </div>
-<!-- ===== Bandeau Infos ===== -->
 
-<a href="infos.html" class="info-banner">
-📌 Informations importantes – Cliquez ici
+<a href="fonctions-derivees.html" class="section-link derivees">
+🔴 Fonctions dérivées
 </a>
 
-<!-- ===== Matières ===== -->
-<a href="suites.html" class="section-link suites">
-📈 Suites
-</a>
-
-<a href="fonctions.html" class="section-link fonc">
-⬆️ Fonctions
-</a>
-
-<a href="statistiques.html" class="section-link stat">
-📊 Statistiques
-</a>
-
-<a href="probabilites.html" class="section-link proba">
-🎲 Probabilites
-</a>
-
-<a href="ccfmaths.html" class="section-link ccf">
-📝 CCF Maths
+<a href="fonctions-bases.html" class="section-link bases">
+🔵 Fonctions – Bases
 </a>
 
 </main>
-
-<footer>
-Dernière mise à jour : 2026
-</footer>
 
 </body>
 </html>
