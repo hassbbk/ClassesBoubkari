@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Fonctions - Dérivées - TMVP1</title>
+</head>
+<body>
+
+<header>
+<h1>📗 Fonctions - Dérivées</h1>
+</header>
+
+<main>
+<ul id="listeDerivees"></ul>
+</main>
+
+<script>
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
+
+    if (!data["Fonctions-derivees"]) return;
+
+    data["Fonctions-derivees"].forEach(file => {
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        a.href = "pdf/Fonctions/Fonctions-derivees/" + file;
+        a.textContent = file.replace(".pdf","");
+        a.target = "_blank";
+
+        li.appendChild(a);
+        document.getElementById("listeDerivees").appendChild(li);
+    });
+
+});
+</script>
+
+</body>
+</html>
