@@ -53,9 +53,14 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-if (!data["Fonctions"] || !data["Fonctions"]["Fonctions-bases"]) return;
+const fichiers = data?.Fonctions?.["Fonctions-bases"];
 
-data["Fonctions"]["Fonctions-bases"].forEach(file => {
+if (!fichiers) {
+    console.log("Clé Fonctions-bases introuvable");
+    return;
+}
+
+fichiers.forEach(file => {
 
     const li = document.createElement("li");
     const a = document.createElement("a");
