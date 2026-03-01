@@ -3,8 +3,8 @@
     "01_crs_SG_eleve.pdf",
     "01_crs_SG_prof.pdf",
     "02_somme_k_premiers_termes_exercices_eleve.pdf",
-    "03_DS_suites_2.pdf",
     "03_DS_suites_1.pdf",
+    "03_DS_suites_2.pdf",
     "03_Ds_suites_3.pdf"
   ],
 
@@ -17,33 +17,31 @@
       "02_activite_fonction_2d_chute.pdf",
       "03_crs_signe_fonction_premier_degre.pdf",
       "04_crs_signe_fonction_second_degre.pdf",
-      "07_ds_fonctions_bases_second_degre.pdf",
       "06_activite_coursf_fonctions_polynome_second_degre.pdf",
+      "07_ds_fonctions_bases_second_degre.pdf",
       "07_correction_ds_fonctions_second_degre.pdf",
       "07_ds_fonctions_second_degre.pdf",
       "08_exo_evolution_chiffre_affaire.pdf",
       "09_activite_trajectoire_projectile.pdf"
-],
+    ],
 
     "Fonctions-derivees": [
       "01_Activite1_Du nombre_derive_a_la_fonction_derivee.pdf",
       "10_________________D.pdf"
-]
-},
-    
+    ]
+  },
+
   "Statistiques": [
-    "01_stat_2_var_cours_activite_eleve",
+    "01_stat_2_var_cours_activite_eleve.pdf",
     "02_trace_ecrite_ajustement_nuage_de_points.pdf",
     "03_corr_livre_maths-tle-bp-ab-1_stat_2_var.pdf",
     "04_ds_entrainement_stat_2_var.pdf",
     "05_ds_stat_2_var.pdf",
-    "statistiques_exercices1.pdf",
-    "statistiques_exercices1.pdf",
     "statistiques_exercices1.pdf"
   ],
 
   "Probabilites": [
-    "01_ crs_proba_rappels.pdf",
+    "01_crs_proba_rappels.pdf",
     "11_crs_proba_trace_ecrite.pdf",
     "13_crs_constitution_jeu_de_cartes.pdf",
     "14_crs_methode_chemin_proba_totale_prof.pdf",
@@ -60,8 +58,8 @@
     "25_exos_proba_pour_ccf.pdf",
     "30_ds1_test_de_connaissances_bases_proba.pdf",
     "31_ds2_proba.pdf"
-    
   ],
+
   "CcfMaths": [
     "0______________e.pdf",
     "0________________________f.pdf",
