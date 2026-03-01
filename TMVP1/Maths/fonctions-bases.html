@@ -2,11 +2,13 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Fonctions - bases - TMVP1</title>
+<title>Fonctions - Bases - TMVP1</title>
+
 <style>
 body { font-family: Arial; margin:0; background:#eef2f7; }
-header { background:#0077b6; color:white; text-align:center; padding:20px; }
+header { background:#0077b6; color:white; text-align:center; padding:25px; }
 main { max-width:900px; margin:40px auto; padding:20px; }
+
 .nav-btn {
     display:inline-block;
     margin-bottom:20px;
@@ -15,23 +17,26 @@ main { max-width:900px; margin:40px auto; padding:20px; }
     color:white;
     text-decoration:none;
     border-radius:5px;
-    font-size:14px;
 }
+
 ul { list-style:none; padding:0; }
+
 li {
     background:white;
     padding:15px;
-    margin-bottom:10px;
+    margin-bottom:12px;
     border-left:4px solid #0077b6;
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
-a { text-decoration:none; color:#001f3f; }
+
+a { text-decoration:none; color:#001f3f; font-weight:bold; }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>🔵 Fonctions - bases</h1>
+<h1>🔵 Fonctions – Bases</h1>
 </header>
 
 <main>
@@ -43,18 +48,18 @@ a { text-decoration:none; color:#001f3f; }
 </main>
 
 <script>
-fetch("pdf/liste.json")
+fetch("../pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-if (!data["Fonctions"]["Fonctions-bases"]) return;
+if (!data["Fonctions"] || !data["Fonctions"]["Fonctions-bases"]) return;
 
 data["Fonctions"]["Fonctions-bases"].forEach(file => {
 
     const li = document.createElement("li");
     const a = document.createElement("a");
 
-    a.href = "pdf/Fonctions/Fonctions-bases/" + file;
+    a.href = "../pdf/Fonctions-bases/" + file;
     a.textContent = file.replace(".pdf","");
     a.target = "_blank";
 
