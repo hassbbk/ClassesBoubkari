@@ -81,7 +81,7 @@ a {
 </main>
 
 <script>
-fetch("pdf/liste.json")
+fetch("../pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
@@ -92,12 +92,12 @@ fetch("pdf/liste.json")
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Fonctions/Fonctions-bases/" + file;
+        a.href = "../pdf/Fonctions-bases/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
 
         li.appendChild(a);
-        document.getElementById("listeFonctions-bases").appendChild(li);
+        document.getElementById("listeFonction-bases").appendChild(li);
     });
 
 });
