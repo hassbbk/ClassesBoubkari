@@ -3,20 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>Fonctions - Dérivées - TMVP1</title>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GTQZ7TKSY1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GTQZ7TKSY1');
 </script>
 
 <style>
-body { font-family: Arial; margin:0; background:#eef2f7; }
-header { background:#c1121f; color:white; text-align:center; padding:25px; }
-main { max-width:900px; margin:40px auto; padding:20px; }
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
+}
+
+header { 
+    background:#c1121f; 
+    color:white; 
+    text-align:center; 
+    padding:25px; 
+}
+
+main { 
+    max-width:900px; 
+    margin:40px auto; 
+    padding:20px;
+}
 
 .nav-btn {
     display:inline-block;
@@ -29,7 +44,14 @@ main { max-width:900px; margin:40px auto; padding:20px; }
     font-size:14px;
 }
 
-ul { list-style:none; padding:0; }
+.nav-btn:hover {
+    background:#003366;
+}
+
+ul { 
+    list-style:none; 
+    padding:0; 
+}
 
 li {
     background:white;
@@ -39,7 +61,11 @@ li {
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-a { text-decoration:none; color:#001f3f; font-weight:bold; }
+a { 
+    text-decoration:none; 
+    color:#001f3f; 
+    font-weight:bold; 
+}
 </style>
 </head>
 
@@ -62,16 +88,34 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-if (!data["Fonctions"] || !data["Fonctions"]["Fonctions-derivees"]) return;
+const fichiers = data?.Fonctions?.["Fonctions-derivees"];
 
-data["Fonctions"]["Fonctions-derivees"].forEach(file => {
+if (!fichiers) {
+    console.log("Clé Fonctions-derivees introuvable");
+    return;
+}
+
+fichiers.forEach(file => {
 
     const li = document.createElement("li");
     const a = document.createElement("a");
 
-    a.href = "pdf/Fonctions/Fonctions-derivees/" + file;
+    a.href = "#";
     a.textContent = file.replace(".pdf","");
-    a.target = "_blank";
+
+    a.onclick = function() {
+
+        // ✅ Tracking Google
+        if (typeof gtag === "function") {
+            gtag('event', 'clic_pdf', {
+                'event_category': 'Fonctions-derivees',
+                'event_label': file
+            });
+        }
+
+        // ✅ Ouverture PDF
+        window.open("pdf/Fonctions/Fonctions-derivees/" + file, "_blank");
+    };
 
     li.appendChild(a);
     document.getElementById("liste").appendChild(li);
