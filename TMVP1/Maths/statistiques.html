@@ -96,20 +96,38 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Statistiques"]) return;
+const fichiers = data?.Statistiques;
 
-    data["Statistiques"].forEach(file => {
+if (!fichiers) {
+    console.log("Clé Statistiques introuvable");
+    return;
+}
 
-        const li = document.createElement("li");
-        const a = document.createElement("a");
+fichiers.forEach(file => {
 
-        a.href = "pdf/Statistiques/" + file;
-        a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+    const li = document.createElement("li");
+    const a = document.createElement("a");
 
-        li.appendChild(a);
-        document.getElementById("listeStatistiques").appendChild(li);
-    });
+    a.href = "#";
+    a.textContent = file.replace(".pdf","");
+
+    a.onclick = function() {
+
+        // ✅ TRACKING GOOGLE
+        if (typeof gtag === "function") {
+            gtag('event', 'clic_pdf', {
+                'event_category': 'Statistiques',
+                'event_label': file
+            });
+        }
+
+        // ✅ OUVERTURE PDF
+        window.open("pdf/Statistiques/" + file, "_blank");
+    };
+
+    li.appendChild(a);
+    document.getElementById("listeStatistiques").appendChild(li);
+});
 
 })
 .catch(error => {
