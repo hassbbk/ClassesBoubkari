@@ -96,20 +96,38 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Suites"]) return;
+const fichiers = data?Suites;
 
-    data["Suites"].forEach(file => {
+if (!fichiers) {
+    console.log("Clé Suites introuvable");
+    return;
+}
 
-        const li = document.createElement("li");
-        const a = document.createElement("a");
+fichiers.forEach(file => {
 
-        a.href = "pdf/Suites/" + file;
-        a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+    const li = document.createElement("li");
+    const a = document.createElement("a");
 
-        li.appendChild(a);
-        document.getElementById("listeSuites").appendChild(li);
-    });
+    a.href = "#";
+    a.textContent = file.replace(".pdf","");
+
+    a.onclick = function() {
+
+        // ✅ TRACKING GOOGLE
+        if (typeof gtag === "function") {
+            gtag('event', 'clic_pdf', {
+                'event_category': 'Suites',
+                'event_label': file
+            });
+        }
+
+        // ✅ OUVERTURE PDF
+        window.open("pdf/Suites/" + file, "_blank");
+    };
+
+    li.appendChild(a);
+    document.getElementById("listeSuites").appendChild(li);
+});
 
 })
 .catch(error => {
