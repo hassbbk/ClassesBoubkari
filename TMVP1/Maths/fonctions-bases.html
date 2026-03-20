@@ -3,6 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <title>Fonctions - Bases - TMVP1</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GTQZ7TKSY1');
+</script>
+
+<style>
+body { 
+    font-family: Arial; 
+    margin:0; 
+    background:#eef2f7; 
+}
+
+header { 
+    background:#0077b6; 
+    color:white; 
+    text-align:center; 
+    padding:25px; 
+}
+
+main { 
+    max-width:900px; 
+    margin:40px auto; 
+    padding:20px;
+}
+
+.nav-btn {
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.nav-btn:hover {
+    background:#003366;
+}
+
+ul { 
+    list-style:none; 
+    padding:0; 
+}
+
+li {
+    background:white;
+    padding:15px;
+    margin-bottom:10px;
+    border-left:4px solid #0077b6;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+a { 
+    text-decoration:none; 
+    color:#001f3f; 
+    font-weight:bold; 
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🔵 Fonctions – Bases</h1>
+</header>
+
+<main>
+
+<a href="fonctions.html" class="nav-btn">⬅ Retour Fonctions</a>
+
+<ul id="liste"></ul>
+
+</main>
+
+<script>
+fetch("pdf/liste.json")
+.then(response => response.json())
+.then(data => {
+
+const fichiers = data?.Fonctions?.["Fonctions-bases"];
+
+if (!fichiers) {
+    console.log("Clé Fonctions-bases introuvable");
+    return;
+}
+
+fichiers.forEach(file => {
+
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+
+    a.href = "#";
+    a.textContent = file.replace(".pdf","");
+
+    a.onclick = function() {
+
+        // ✅ Envoi à Google Analytics
+        if (typeof gtag === "function") {
+            gtag('event', 'clic_pdf', {
+                'event_category': 'Fonctions-bases',
+                'event_label': file
+            });
+        }
+
+        // ✅ Ouverture du PDF
+        window.open("pdf/Fonctions/Fonctions-bases/" + file, "_blank");
+    };
+
+    li.appendChild(a);
+    document.getElementById("liste").appendChild(li);
+});
+
+})
+.catch(error => console.log("Erreur JSON :", error));
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Fonctions - Bases - TMVP1</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
