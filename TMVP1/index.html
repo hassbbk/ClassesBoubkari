@@ -4,6 +4,163 @@
 <meta charset="UTF-8">
 <title>TMVP1- Classes Boubkari</title>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GTQZ7TKSY1');
+</script>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background:#eef2f7;
+    text-align:center;
+}
+
+header {
+    background:#001f3f;
+    color:white;
+    padding:30px;
+}
+
+.logo {
+    max-height:90px;
+    margin-bottom:15px;
+}
+
+.login-box {
+    margin-top:80px;
+}
+
+input {
+    padding:10px;
+    font-size:16px;
+    width:200px;
+}
+
+button {
+    padding:10px 20px;
+    font-size:16px;
+    background:#001f3f;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-left:10px;
+    border-radius:5px;
+}
+
+button:hover {
+    background:#003366;
+}
+
+.hidden {
+    display:none;
+}
+
+/* ===== Boutons matières ===== */
+
+.matiere {
+    display:block;
+    max-width:400px;
+    margin:20px auto;
+    padding:18px;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    color:white;
+    border-radius:6px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.matiere:hover {
+    transform:translateY(-3px);
+}
+
+.maths { background:#6a4c93; }
+.coens { background:#2a9d8f; }
+.sciences { background:#0077b6; }
+
+.retour {
+    display:inline-block;
+    margin-top:40px;
+    padding:10px 20px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.retour:hover {
+    background:#003366;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="../assets/logo1.png" class="logo" alt="Logo Lycée">
+    <h1>Classe TMVP1</h1>
+</header>
+
+<!-- Zone mot de passe -->
+<div id="login" class="login-box">
+    <h2>🔒 Accès protégé</h2>
+    <p>Veuillez entrer le mot de passe :</p>
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="checkPassword()">Valider</button>
+    <p id="error" style="color:red;"></p>
+</div>
+
+<!-- Contenu caché -->
+<div id="content" class="hidden">
+
+    <h2>Bienvenue en TMVP1</h2>
+
+    <a href="Maths/index.html" class="matiere maths">
+        📘 Mathématiques
+    </a>
+
+    <a href="Co-enseignement/index.html" class="matiere coens">
+        🤝 Co-enseignement
+    </a>
+
+    <a href="Sciences/index.html" class="matiere sciences">
+        🔬 Sciences
+    </a>
+
+    <a href="../index.html" class="retour">
+        ⬅ Retour accueil général
+    </a>
+
+</div>
+
+<script>
+function checkPassword() {
+    var pwd = document.getElementById("password").value;
+
+    if (pwd === "TMVP12026") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    } else {
+        document.getElementById("error").innerText = "Mot de passe incorrect";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>TMVP1- Classes Boubkari</title>
+
 <style>
 body {
     margin:0;
