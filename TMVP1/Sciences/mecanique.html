@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Mécanique - TMVP1</title>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
@@ -75,7 +76,7 @@ a {
 <body>
 
 <header>
-<h1>⚡ Mécanique - TMVP1</h1>
+<h1>⚙ Mécanique - TMVP1</h1>
 </header>
 
 <main>
@@ -96,16 +97,30 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Mecanique"]) return;
+    const fichiers = data["Mecanique"];
+    if (!fichiers) return;
 
-    data["Mecanique"].forEach(file => {
+    fichiers.forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Mecanique/" + file;
+        a.href = "#";
         a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+
+        a.onclick = function() {
+
+            // ✅ TRACKING GOOGLE
+            if (typeof gtag === "function") {
+                gtag('event', 'clic_pdf', {
+                    'event_category': 'Mecanique',
+                    'event_label': file
+                });
+            }
+
+            // ✅ OUVERTURE PDF
+            window.open("pdf/Mecanique/" + file, "_blank");
+        };
 
         li.appendChild(a);
         document.getElementById("listeMecanique").appendChild(li);
