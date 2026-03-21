@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Electricité - TMVP1</title>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
@@ -96,16 +97,30 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Electricite"]) return;
+    const fichiers = data["Electricite"];
+    if (!fichiers) return;
 
-    data["Electricite"].forEach(file => {
+    fichiers.forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Electricite/" + file;
+        a.href = "#";
         a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+
+        a.onclick = function() {
+
+            // ✅ TRACKING GOOGLE
+            if (typeof gtag === "function") {
+                gtag('event', 'clic_pdf', {
+                    'event_category': 'Electricite',
+                    'event_label': file
+                });
+            }
+
+            // ✅ OUVERTURE PDF
+            window.open("pdf/Electricite/" + file, "_blank");
+        };
 
         li.appendChild(a);
         document.getElementById("listeElectricite").appendChild(li);
