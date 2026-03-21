@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Thermique - TMVP1</title>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GTQZ7TKSY1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GTQZ7TKSY1');
 </script>
 
 <style>
@@ -68,6 +68,7 @@ li {
 a { 
     text-decoration:none; 
     color:#001f3f; 
+    font-weight:bold;
 }
 </style>
 </head>
@@ -96,16 +97,34 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Thermique"]) return;
+    const fichiers = data?.["Thermique"];
 
-    data["Thermique"].forEach(file => {
+    if (!fichiers) {
+        console.log("Clé Thermique introuvable");
+        return;
+    }
+
+    fichiers.forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Thermique/" + file;
+        a.href = "#";
         a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+
+        a.onclick = function() {
+
+            // 📊 TRACKING GOOGLE
+            if (typeof gtag === "function") {
+                gtag('event', 'clic_pdf', {
+                    event_category: 'Thermique',
+                    event_label: file
+                });
+            }
+
+            // 📂 OUVERTURE PDF
+            window.open("pdf/Thermique/" + file, "_blank");
+        };
 
         li.appendChild(a);
         document.getElementById("listeThermique").appendChild(li);
