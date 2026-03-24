@@ -4,15 +4,6 @@
 <meta charset="UTF-8">
 <title>Probabilites - PMVTR</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-GTQZ7TKSY1');
-</script>
-
 <style>
 body { 
     font-family: Arial; 
@@ -68,7 +59,6 @@ li {
 a { 
     text-decoration:none; 
     color:#001f3f; 
-    font-weight:bold;
 }
 </style>
 </head>
@@ -97,40 +87,16 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    const fichiers = data?.Probabilites;
+    if (!data["Probabilites"]) return;
 
-    if (!fichiers) {
-        console.log("❌ Clé Probabilites introuvable");
-        return;
-    }
-
-    fichiers.forEach(file => {
-
-        // ✅ Sécurité : ignorer les fichiers non PDF
-        if (!file.toLowerCase().endsWith(".pdf")) {
-            console.warn("⚠️ Ignoré (pas un PDF):", file);
-            return;
-        }
+    data["Probabilites"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "#";
+        a.href = "pdf/Probabilites/" + file;
         a.textContent = file.replace(".pdf","");
-
-        a.onclick = function() {
-
-            // ✅ TRACKING GOOGLE
-            if (typeof gtag === "function") {
-                gtag('event', 'clic_pdf', {
-                    'event_category': 'Probabilites',
-                    'event_label': file
-                });
-            }
-
-            // ✅ OUVERTURE PDF
-            window.open("pdf/Probabilites/" + file, "_blank");
-        };
+        a.target = "_blank";
 
         li.appendChild(a);
         document.getElementById("listeProbabilites").appendChild(li);
@@ -138,7 +104,7 @@ fetch("pdf/liste.json")
 
 })
 .catch(error => {
-    console.log("❌ Erreur chargement liste.json :", error);
+    console.log("Erreur chargement liste.json :", error);
 });
 </script>
 
