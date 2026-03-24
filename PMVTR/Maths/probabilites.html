@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Probabilites - PMVTR</title>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GTQZ7TKSY1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GTQZ7TKSY1');
 </script>
 
 <style>
@@ -68,6 +68,7 @@ li {
 a { 
     text-decoration:none; 
     color:#001f3f; 
+    font-weight:bold;
 }
 </style>
 </head>
@@ -96,16 +97,40 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Probabilites"]) return;
+    const fichiers = data?.Probabilites;
 
-    data["Probabilites"].forEach(file => {
+    if (!fichiers) {
+        console.log("❌ Clé Probabilites introuvable");
+        return;
+    }
+
+    fichiers.forEach(file => {
+
+        // ✅ Sécurité : ignorer les fichiers non PDF
+        if (!file.toLowerCase().endsWith(".pdf")) {
+            console.warn("⚠️ Ignoré (pas un PDF):", file);
+            return;
+        }
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Probabilites/" + file;
+        a.href = "#";
         a.textContent = file.replace(".pdf","");
-        a.target = "_blank";
+
+        a.onclick = function() {
+
+            // ✅ TRACKING GOOGLE
+            if (typeof gtag === "function") {
+                gtag('event', 'clic_pdf', {
+                    'event_category': 'Probabilites',
+                    'event_label': file
+                });
+            }
+
+            // ✅ OUVERTURE PDF
+            window.open("pdf/Probabilites/" + file, "_blank");
+        };
 
         li.appendChild(a);
         document.getElementById("listeProbabilites").appendChild(li);
@@ -113,7 +138,7 @@ fetch("pdf/liste.json")
 
 })
 .catch(error => {
-    console.log("Erreur chargement liste.json :", error);
+    console.log("❌ Erreur chargement liste.json :", error);
 });
 </script>
 
