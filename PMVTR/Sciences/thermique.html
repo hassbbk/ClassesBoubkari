@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Thermique - PMVTR</title>
+<title>Transformateur - PMVTR</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
@@ -75,7 +75,7 @@ a {
 <body>
 
 <header>
-<h1>⚡ Thermique - PMVTR</h1>
+<h1>⚡ Transformateur - PMVTR</h1>
 </header>
 
 <main>
@@ -87,7 +87,7 @@ a {
 
 <h2>Documents disponibles</h2>
 
-<ul id="listeThermique"></ul>
+<ul id="listeTransformateur"></ul>
 
 </main>
 
@@ -96,19 +96,19 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["Thermique"]) return;
+    if (!data["Transformateur"]) return;
 
     data["Thermique"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/Thermique/" + file;
+        a.href = "pdf/Transformateur/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
 
         li.appendChild(a);
-        document.getElementById("listeThermique").appendChild(li);
+        document.getElementById("listeTransformateur").appendChild(li);
     });
 
 })
