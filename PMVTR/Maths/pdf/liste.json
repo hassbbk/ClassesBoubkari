@@ -1,14 +1,14 @@
 {
   "Suites": [
-    "100_crs_Suites_ar.pdf",
-    "101_crs_Suite_ar_prof.pdf",
+    "100_crs_Suites_ar_eleve.pdf",
+    "100_crs_Suites_ar_prof.pdf",
     "102_crs_somme_suite_arithmetique.pdf",
-    "102_trace_ecrite_suite_ar_1.pdf",
-    "102_trace_écrite_suite_ar_2.pdf",
-    "140_exo_suites_ar_livre.pdf",
-    "141_exo_suites_ar.pdf",
-    "170_ds_suite_ar_correction.pdf",
+    "103_trace_ecrite_suite_ar_1.pdf",
+    "140_exo_Suites_ar_livre_1ere.pdf",
+    "141_exo_suites_ar_fiche_entrainement.pdf",
     "170_ds_suite_ar_sujet.pdf",
+    "170_ds_suite_ar_correction.pdf",
+    "++++++++++++++++++++++.pdf",
     "suites_exercices1.pdf"
   ],
 
