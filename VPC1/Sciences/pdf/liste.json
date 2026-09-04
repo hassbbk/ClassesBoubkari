@@ -1,1 +1,31 @@
-
+{
+  "Electricite": [
+    "100_circuit_elec_cours_1_eleve.pdf",
+    "100_circuit_elec_cours_1_prof.pdf",
+    "101_crs_controle_eclairage.pdf",
+    "102_bases_electricite.pdf",
+    "103_lois_elec_eleve.pdf",
+    "103_lois_elec_prof.pdf",
+    "104_trace_ecrite_loi_des_tensions_et_intensités.pdf",
+    "105_exo_loi_des_tensions_et_intensités.pdf",
+    "106_ds-circuit-electrique.pdf",
+    "107_exo-circuit-electrique-entrainement_cap.pdf",
+    "chapitre_1.pdf",
+    "e_____________________.pdf"
+  ],
+  "Son": [
+    "01_cours_acoustique_eleve.pdf"
+  ],
+  "Mecanique": [
+    "01_tp_relation_masse_poids.pdf",
+    "Chapitre Mecanique 1.pdf"
+  ],
+  "Chimie": [
+    "Chapitre Chimie 1.pdf"
+  ],
+  "CcfSciences": [
+    "CCF_CAP_Sciences_Meca_Poids.pdf",
+    "C__________ccf________2.pdf",
+    "C__________ccf_________3.pdf"
+  ]
+}
