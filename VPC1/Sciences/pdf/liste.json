@@ -14,18 +14,37 @@
     "e_____________________.pdf"
   ],
   "Son": [
-    "01_cours_acoustique_eleve.pdf"
+    "01_cours_acoustique_eleve.pdf",
+    "01_cours_acoustique_prof.pdf",
+    "03_exo_acoustique_eleve.pdf",
+    "03_exo_acoustique_livre_delagrave.pdf",
+    "04_Exposes_sur_le_son_cap.pdf",
+    "Chapitre 1.pdf",
+    "Chapitre 1.pdf"
+  ],
+  "Mouvement": [
+    "01_Cours_mouvement.pdf",
+    "01_Cours_mouvement_prof.pdf",
+    "02_exercicesdiriges1_vitesse_distance_temps.pdf",
+    "03_Eval_mouvement.pdf",
+    "04_exo_Exercices_livre_CAP_mouvement.pdf",
+    "04_vitesse_mouvement_exercices_corriges_controle_evaluation_sujet_enonce.pdf",
+    "Chapitre Thermique 1.pdf"
   ],
   "Mecanique": [
     "01_tp_relation_masse_poids.pdf",
+    "02_cours_actions_mcaniques_et_forces_eleve.pdf",
+    "02_cours_actions_mcaniques_et_forces_prof.pdf",
+    "03_exercice_representation_force.pdf",
+    "04_ds_Actions Méca_ CAP.pdf",
     "Chapitre Mecanique 1.pdf"
   ],
   "Chimie": [
+    "01_activite_cours_Atome_molécule_livre.pdf",
+    "03_ds_Atome_molécule1.pdf",
+    "02_correction_exo_Atome_Molecule_livre.pdf",
+    "Chapitre Chimie 1.pdf",
+    "04_Trace_ecrite_atome_molecule_Constitution_de_la_matière.pdf",
     "Chapitre Chimie 1.pdf"
-  ],
-  "CcfSciences": [
-    "CCF_CAP_Sciences_Meca_Poids.pdf",
-    "C__________ccf________2.pdf",
-    "C__________ccf_________3.pdf"
   ]
 }
