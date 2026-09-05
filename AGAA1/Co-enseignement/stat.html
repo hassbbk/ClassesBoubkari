@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Unites - Co-enseignement</title>
+<title>Statistiques - Co-enseignement</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
@@ -29,14 +29,14 @@ a { text-decoration:none; color:#001f3f; }
 
 <header>
 <img src="/assets/logo.png" class="logo">
-<h1>📘 Unites</h1>
+<h1>📘 Statistiques</h1>
 </header>
 
 <main>
 
 <a href="index.html" class="retour">⬅ Retour</a>
 
-<ul id="listeUnites"></ul>
+<ul id="listeStatistiques"></ul>
 
 </main>
 
@@ -44,16 +44,16 @@ a { text-decoration:none; color:#001f3f; }
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
-    if (!data["Unites"]) return;
+    if (!data["Statistiques"]) return;
 
-    data["Unites"].forEach(file => {
+    data["Statistiques"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "pdf/Unites/" + file;
+        a.href = "pdf/Statistiques/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
         li.appendChild(a);
-        document.getElementById("listeUnites").appendChild(li);
+        document.getElementById("listeStatistiques").appendChild(li);
     });
 });
 </script>
