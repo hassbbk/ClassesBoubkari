@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>CalculNumerique - Co-enseignement</title>
+<title>Proportionnalite - Co-enseignement</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
@@ -36,7 +36,7 @@ a { text-decoration:none; color:#001f3f; }
 
 <a href="index.html" class="retour">⬅ Retour</a>
 
-<ul id="listeCalculNumerique"></ul>
+<ul id="listeProportionnalite"></ul>
 
 </main>
 
@@ -44,16 +44,16 @@ a { text-decoration:none; color:#001f3f; }
 fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
-    if (!data["CalculNumerique"]) return;
+    if (!data["Proportionnalite"]) return;
 
-    data["CalculNumerique"].forEach(file => {
+    data["Proportionnalite"].forEach(file => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "pdf/CalculNumerique/" + file;
+        a.href = "pdf/Proportionnalite/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
         li.appendChild(a);
-        document.getElementById("listeCalculNumerique").appendChild(li);
+        document.getElementById("listeProportionnalite").appendChild(li);
     });
 });
 </script>
