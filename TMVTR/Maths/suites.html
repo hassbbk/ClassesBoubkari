@@ -96,7 +96,7 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-const fichiers = data?Suites;
+const fichiers = data.Suites;
 
 if (!fichiers) {
     console.log("Clé Suites introuvable");
