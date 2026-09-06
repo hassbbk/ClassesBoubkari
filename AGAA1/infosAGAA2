@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Informations -VPC1</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GTQZ7TKSY1');
+</script>
+
+<style>
+body {
+    font-family: Arial;
+    margin:0;
+    background:#eef2f7;
+}
+
+header {
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+main {
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.nav-btn {
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#001f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.section {
+    background:white;
+    padding:25px;
+    border-radius:6px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📌 Informations -AGAA2</h1>
+</header>
+
+<main>
+
+<a href="index.html" class="nav-btn">⬅ Retour</a>
+
+<div class="section">
+
+<h2>Infos importantes à retenir</h2>
+
+<p>
+Bienvenue sur l'espace Maths Sciences de la classe AGAA2.
+</p>
+
+<ul>
+
+<li> 1/ Fournitures en maths: CALCULATRICE CASIO FX 92 OU MODELE AU DESSUS. <li>
+<li> GRAND PORTE VUE 200 VUES (c'est important) OU CLASSEUR AVEC 200 POCHETTES FEUILLE A4 PETITS CARREAUX.</li>
+<li>2/Fournitures en sciences: UTILISATION DES MEMES FOURNITURES QU'EN MATHS (rien à prévoir.</li>
+<li> 3/ Cahier de brouillon.</li>
+</ul>
+
+<p>.
+</p>
+
+</div>
+
+</main>
+
+</body>
+</html>
