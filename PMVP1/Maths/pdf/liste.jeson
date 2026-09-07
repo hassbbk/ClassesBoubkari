@@ -8,10 +8,8 @@
     "141_exo_suites_ar_fiche_entrainement.pdf",
     "170_ds_suite_ar_sujet.pdf",
     "170_ds_suite_ar_correction.pdf",
-    "++++++++++++++++++++++.pdf",
     "suites_exercices1.pdf"
   ],
-
   "Fonctions": [
     "f01_crs_comment_onstruire_tableau_variation_eleve.pdf",
     "01_crs_comment_onstruire_tableau_variation_prof.pdf",
@@ -30,10 +28,8 @@
     "17_eval_fonctions_petits_exercices.pdf",
     "18_ds_fonctions_second_degre.pdf",
     "19_eval_problèmes_et_entrainement_ccf.pdf",
-    "fonctions_exercices1.pdf",
     "fonctions_exercices1.pdf"
   ],
-
   "Statistiques": [
     "300_crs_statistiques_deux_variables_eleve.pdf",
     "301_crs_statistiques_deux_variables_prof.pdf",
@@ -42,11 +38,8 @@
     "304_activite_cours_coefficient_de_determination.pdf",
     "340_DS-stat2var.pdf",
     "341_entrainement_ccf_statistiques_deux_variables.pdf",
-    "statistiques_exercices1.pdf",
-    "statistiques_exercices1.pdf",
     "statistiques_exercices1.pdf"
   ],
-
   "Probabilites": [
     "00_cours_proba_rappels.pdf",
     "01_simul_de_8_faces.pdf",
@@ -57,16 +50,13 @@
     "05_exercices_livre_proba_1re_eleve.pdf",
     "06_test_proba_N1_tirage_sans_remise_arbre_des_possibles.pdf",
     "07_Ds_proba_1.pdf",
-    "08_exos_proba_pour_ccf.pdf",
-    ".pdf"
+    "08_exos_proba_pour_ccf.pdf"
   ],
-  
   "CcfMaths": [
-    "00_Les épreuves de CCF Maths  auront lieu  1e 16 juin.pdf",
+    "00_Les epreuves de CCF Maths auront lieu le 16 juin.pdf",
     "01_exos_suites_pour_ccf.pdf",
     "_02_sujet_ccf_stat_2_var.pdf",
     "03_sujet_ccf_fonctions_second-degre_var.pdf",
-    "04_exos_proba_pour_ccf.pdf",
-    "p____________________1.pdf"
+    "04_exos_proba_pour_ccf.pdf"
   ]
 }
