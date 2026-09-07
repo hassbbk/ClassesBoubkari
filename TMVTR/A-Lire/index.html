@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>A-lire- TMVTR</title>
+<title>A-Lire- TMVTR</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
@@ -96,19 +96,19 @@ fetch("pdf/liste.json")
 .then(response => response.json())
 .then(data => {
 
-    if (!data["A-lire"]) return;
+    if (!data["A-Lire"]) return;
 
-    data["A-lire"].forEach(file => {
+    data["A-Lire"].forEach(file => {
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/A-lire/" + file;
+        a.href = "pdf/A-Lire/" + file;
         a.textContent = file.replace(".pdf","");
         a.target = "_blank";
 
         li.appendChild(a);
-        document.getElementById("listeA-lire").appendChild(li);
+        document.getElementById("listeA-Lire").appendChild(li);
     });
 
 })
