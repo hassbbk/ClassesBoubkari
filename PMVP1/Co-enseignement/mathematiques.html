@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Electricité - PMVP1</title>
+<title>Mathématiques - PMVP1</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTQZ7TKSY1"></script>
 <script>
@@ -15,7 +15,7 @@
 
 <style>
 body { 
-    font-family: Arial; 
+    font-family: Arial, sans-serif; 
     margin:0; 
     background:#eef2f7; 
 }
@@ -69,13 +69,17 @@ a {
     text-decoration:none; 
     color:#001f3f; 
 }
+
+a:hover {
+    text-decoration:underline;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>⚡ MATHEMATIQUES - PMVP1</h1>
+<h1>📐 MATHEMATIQUES - PMVP1</h1>
 </header>
 
 <main>
@@ -93,27 +97,39 @@ a {
 
 <script>
 fetch("pdf/liste.json")
-.then(response => response.json())
+.then(response => {
+    if (!response.ok) throw new Error("Erreur de chargement : " + response.status);
+    return response.json();
+})
 .then(data => {
 
     if (!data["MATHEMATIQUES"]) return;
 
+    const liste = document.getElementById("listeMATHEMATIQUES");
+    liste.innerHTML = "";
+
     data["MATHEMATIQUES"].forEach(file => {
+
+        // Ignore les entrées vides ou fictives
+        if (!file || file.includes("____")) return;
 
         const li = document.createElement("li");
         const a = document.createElement("a");
 
-        a.href = "pdf/MATHEMATIQUES/" + file;
-        a.textContent = file.replace(".pdf","");
+        // encodeURIComponent permet d'encoder correctement les espaces et caractères spéciaux dans l'URL
+        a.href = "pdf/MATHEMATIQUES/" + encodeURIComponent(file);
+        
+        // Supprime l'extension du nom du fichier (.pdf, .xlsx, .ods, etc.) pour l'affichage
+        a.textContent = file.replace(/\.[^/.]+$/, "");
         a.target = "_blank";
 
         li.appendChild(a);
-        document.getElementById("listeMATHEMATIQUES").appendChild(li);
+        liste.appendChild(li);
     });
 
 })
 .catch(error => {
-    console.log("Erreur chargement liste.json :", error);
+    console.error("Erreur chargement liste.json :", error);
 });
 </script>
 
