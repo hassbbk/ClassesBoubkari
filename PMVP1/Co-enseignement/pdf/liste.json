@@ -13,11 +13,13 @@
     "____xxx_________.pdf",
     "____xxx_________.pdf"
   ],
-  "MATHEMATIQUES": [
-    "01_activite_Facture_garage_a_completer.xlsx",
+  MATHEMATIQUES": [
+    "01_activite_Facture_garage_a_completer.ods",
     "01_activite_Facture_garage_a_completer.pdf",
+    "01_activite_Facture_garage_a_completer.xlsx",
     "02_activite_Facture_a_verifier.xlsx",
-    "03_facture_croque et self eleve.xls",
+    "03_facture_croque et self eleve.xlsx",
+    "03_facture_croque et self prof.xlsx",
     "04_Exercices factures sur tableur générées par IA.xlsx",
     "____xxx_________.pdf",
     "____xxx_________.pdf"
